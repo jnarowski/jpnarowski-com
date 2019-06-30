@@ -7,16 +7,23 @@ const getApi = async function () {
   return api
 }
 
-const dataToPost = (post) => {
-  return {
-    post,
-    title: getRichText(post.data.blog_post_title),
-    content: getRichText(post.data.blog_content)
-  }
+export const getText = (content) => {
+  return PrismicDom.RichText.asText(content)
 }
 
-const getRichText = (content) => {
-  return PrismicDom.RichText.asText(content)
+export const getHtml = (content) => {
+  return PrismicDom.RichText.asHtml(content)
+}
+
+const dataToPost = (post) => {
+  // eslint-disable-next-line no-console
+  // console.log(post, '.....')
+  return {
+    post,
+    uid: post.uid,
+    title: getText(post.data.blog_post_title),
+    content: getHtml(post.data.blog_content)
+  }
 }
 
 export const getPost = async function (uid) {
@@ -29,16 +36,11 @@ export const getPost = async function (uid) {
 export const getPosts = async function () {
   const api = await getApi()
 
-  const results = await api.query(
+  const resp = await api.query(
     Prismic.Predicates.at('document.type', 'blog-post'), {
       lang: 'en-us'
-    },
-    {
-      pageSize: 5,
-      page: 1,
-      orderings: '[blog-post.published desc]'
     }
   )
 
-  return results.results.map(d => dataToPost(d))
+  return resp.results.map(d => dataToPost(d))
 }

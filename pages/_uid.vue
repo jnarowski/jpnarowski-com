@@ -1,5 +1,5 @@
 <script>
-import { getPost } from './../modules/headlessCms'
+import { getPost } from '@/modules/headlessCms'
 
 export default {
   components: {
@@ -15,13 +15,11 @@ export default {
       const post = await getPost(params.uid)
 
       // Load the edit button
-      if (process.client) window.prismic.setupEditButton()
+      // if (process.client) window.prismic.setupEditButton()
 
-      // Returns data to be used in template
       return post
     } catch (e) {
-      // eslint-disable-next-line no-console
-      console.log('dooooo')
+      console.log('[ERROR] in _uid.asyncData', e)
 
       // Returns error page
       error({ statusCode: 404, message: 'Page not found' })
@@ -32,7 +30,5 @@ export default {
 </script>
 
 <template>
-  <div>
-    {{ content }}
-  </div>
+  <div v-html="content" />
 </template>

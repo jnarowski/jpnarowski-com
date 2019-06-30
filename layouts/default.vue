@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="margin: auto; width: 800px;">
     <nuxt />
   </div>
 </template>
