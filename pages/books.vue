@@ -33,6 +33,12 @@ export default {
   computed: {
     reviews() {
       return this.$store.getters['books/list']
+    },
+    reviewsRead() {
+      return this.$store.getters['books/listRead']
+    },
+    reviewsReading() {
+      return this.$store.getters['books/listReading']
     }
   },
   methods: {
@@ -48,7 +54,28 @@ export default {
     <div v-if="!reviews.length">
       Loading reviews...
     </div>
-    <div v-for="review in reviews" :key="review.id" style="padding: 10px; border-bottom: 1px solid whiteSmoke">
+    <div class="section-title mt-4">
+      <h2 class="mb-2">
+        <span>Reading</span>
+      </h2>
+    </div>
+    <div v-for="review in reviewsReading" :key="review.id" style="padding: 10px; border-bottom: 1px solid whiteSmoke">
+      <b-row>
+        <b-col cols="1">
+          <img :src="review.book.small_image_url"></img>
+        </b-col>
+        <b-col cols="11">
+          <div><a target="_BLANK" :href="review.book.link">{{ review.book.title }}</a></div>
+          <div v-html="truncate(review.book.description, 200)" />
+        </b-col>
+      </b-row>
+    </div>
+    <div class="section-title mt-4">
+      <h2 class="mb-2">
+        <span>Read</span>
+      </h2>
+    </div>
+    <div v-for="review in reviewsRead" :key="review.id" style="padding: 10px; border-bottom: 1px solid whiteSmoke">
       <b-row>
         <b-col cols="1">
           <img :src="review.book.small_image_url"></img>

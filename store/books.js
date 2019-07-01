@@ -9,6 +9,12 @@ export const state = () => ({
 export const getters = {
   list: (state) => {
     return state.list
+  },
+  listRead: (state) => {
+    return state.list.filter(r => r.read_at)
+  },
+  listReading: (state) => {
+    return state.list.filter(r => !r.read_at && r.started_at)
   }
 }
 
