@@ -12,7 +12,7 @@ export default {
     },
     {
       name: 'viewport',
-      content: 'width=device-width, initial-scale=1'
+      content: 'width=device-width, initial-scale=1, shrink-to-fit=no'
     },
     {
       hid: 'description',
@@ -24,13 +24,15 @@ export default {
       rel: 'icon',
       type: 'image/x-icon',
       href: '/favicon.ico'
-    },
-    {
-      rel: 'stylesheet',
-      href: 'https://fonts.googleapis.com/css?family=Lato:300,400,700,900'
-    }
-    ]
+    }, {
+      href: 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css',
+      rel: 'stylesheet'
+    }, {
+      href: 'https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i',
+      rel: 'stylesheet'
+    }]
   },
+
   /*
   ** Customize the progress-bar color
   */
@@ -39,8 +41,7 @@ export default {
   ** Global CSS
   */
   css: [
-    '@/assets/css/resetr.css',
-    '@/assets/css/common.css'
+    '@/assets/css/theme.css'
   ],
   /*
   ** Plugins to load before mounting the App

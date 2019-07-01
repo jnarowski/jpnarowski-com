@@ -8,6 +8,10 @@ const getApi = async function () {
 }
 
 export const getText = (content) => {
+  if (!content) {
+    return ''
+  }
+
   return PrismicDom.RichText.asText(content)
 }
 
@@ -16,13 +20,14 @@ export const getHtml = (content) => {
 }
 
 const dataToPost = (post) => {
-  // eslint-disable-next-line no-console
-  // console.log(post, '.....')
   return {
     post,
     uid: post.uid,
-    title: getText(post.data.blog_post_title),
-    content: getHtml(post.data.blog_content)
+    tags: post.tags,
+    featuredImage: post.data.featured_image,
+    title: getText(post.data.title),
+    subtitle: getText(post.data.subtitle),
+    body: getHtml(post.data.body)
   }
 }
 
