@@ -71,6 +71,8 @@ export default {
 
       <!-- Begin Post -->
       <div class="col-md-8 col-md-offset-2 col-xs-12">
+        <div v-if="false" class="cover-image" style="background-image:url('https://jpnarowski.com/wp-content/uploads/2015/07/11406966_10153324153274845_4885584158810164648_n.jpg');" />
+
         <div class="mainheading">
           <h1 class="posttitle mb-0 pb-0">
             <div>{{ title }}</div>
@@ -78,19 +80,6 @@ export default {
               {{ subtitle }}
             </small>
           </h1>
-
-          <!-- Begin Top Meta -->
-          <div v-if="false" class="row post-top-meta">
-            <div class="col-md-2">
-              <a href="author.html"><img class="author-thumb" src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x" alt="Sal"></a>
-            </div>
-            <div class="col-md-10">
-              <a class="link-dark" href="author.html">Sal</a><a href="#" class="btn follow">Follow</a>
-              <span class="author-description">Founder of WowThemes.net and creator of <b>"Mediumish"</b> theme that you're currently previewing. Developing professional premium themes, templates, plugins, scripts since 2012.</span>
-              <span class="post-date">22 July 2017</span><span class="dot" /><span class="post-read">6 min read</span>
-            </div>
-          </div>
-          <!-- End Top Menta -->
         </div>
 
         <!-- Begin Post Content -->
