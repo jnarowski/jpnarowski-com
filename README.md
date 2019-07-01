@@ -1,5 +1,9 @@
 # jpnarowski-com
 
+# Goodreads
+# key: 05pAK5L384cTgNJwktUA
+# secret: 646GwPx91f85sEEJM3fN9Ah81D756Wo3RttuEGerE2A
+
 > JPNarowski Website
 
 ## Build Setup

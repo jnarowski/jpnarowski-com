@@ -11,6 +11,16 @@
         <!-- Right aligned nav items -->
         <b-navbar-nav class="ml-auto">
           <li class="nav-item">
+            <nuxt-link to="/books" class="nav-link">
+              Books
+            </nuxt-link>
+          </li>
+          <li class="nav-item">
+            <nuxt-link to="/curiosities" class="nav-link">
+              Curiosities
+            </nuxt-link>
+          </li>
+          <li class="nav-item">
             <nuxt-link to="/about-me" class="nav-link">
               About Me
             </nuxt-link>
