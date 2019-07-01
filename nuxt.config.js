@@ -1,5 +1,4 @@
 import pkg from './package'
-import PrismicConfig from './prismic.config'
 
 export default {
   mode: 'universal',
@@ -30,15 +29,7 @@ export default {
       rel: 'stylesheet',
       href: 'https://fonts.googleapis.com/css?family=Lato:300,400,700,900'
     }
-    ],
-    script: [{
-      innerHTML: '{ window.prismic = { endpoint: "' + PrismicConfig.apiEndpoint + '"} }'
-    },
-    {
-      src: '//static.cdn.prismic.io/prismic.min.js'
-    }
-    ],
-    __dangerouslyDisableSanitizers: ['script']
+    ]
   },
   /*
   ** Customize the progress-bar color
