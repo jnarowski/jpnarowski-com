@@ -8,7 +8,10 @@ export default {
   },
   filters: {
     truncate(string, value) {
-      return (string || '').substring(0, value) + '…'
+      const regex = /(<([^>]+)>)/ig
+      const newStr = string.replace(regex, '')
+
+      return (newStr || '').substring(0, value) + '…'
     }
   },
   // async asyncData(context) {
@@ -43,7 +46,10 @@ export default {
   },
   methods: {
     truncate(string, value) {
-      return (string || '').substring(0, value) + '…'
+      const regex = /(<([^>]+)>)/ig
+      const newStr = string.replace(regex, '')
+
+      return (newStr || '').substring(0, value) + '…'
     }
   }
 }
