@@ -4,18 +4,21 @@ import { getPost } from '@/modules/headlessCms'
 export default {
   components: {
   },
+  data: () => ({
+    title: null
+  }),
   head() {
     return {
-      title: 'Prismic Nuxt.js Blog'
+      title: this.title
     }
   },
-  async asyncData({ params, error, req }) {
+  async asyncData(context) {
+    const { params, error } = context
+
     try {
-      // Query to get post content
       const post = await getPost(params.uid)
 
-      // Load the edit button
-      // if (process.client) window.prismic.setupEditButton()
+      context.title = post.title
 
       return post
     } catch (e) {

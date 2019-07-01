@@ -11,7 +11,7 @@ export default {
 </script>
 
 <template>
-  <div>
+  <div class="container">
     <div v-for="post in posts" :key="post.uid">
       <nuxt-link :to="post.uid">
         {{ post.title }}
