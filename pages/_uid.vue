@@ -17,8 +17,6 @@ export default {
     },
   },
   head() {
-    console.log(this.$route, 'aaa')
-
     return {
       title: this.title,
     }
