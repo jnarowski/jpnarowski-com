@@ -56,12 +56,12 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/eslint-module',
-    // ['prismic-nuxt', {
-    //   endpoint: 'https://jpnarowski.cdn.prismic.io/api/v2',
-    //   linkResolver: function (doc, ctx) {
-    //     return '/'
-    //   }
-    // }]
+    ['prismic-nuxt', {
+      endpoint: 'https://jpnarowski-com.cdn.prismic.io/api/v2',
+      linkResolver: function (doc, ctx) {
+        return '/'
+      }
+    }]
   ],
   /*
    ** Axios module configuration
