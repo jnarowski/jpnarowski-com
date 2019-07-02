@@ -20,14 +20,15 @@ export const getHtml = (content) => {
 }
 
 const getReadTime = (body) => {
-  const totalWords = body.trim().split(/\s+/).length
+  const text = PrismicDom.RichText.asText(body)
+  const totalWords = text.trim().split(/\s+/).length
   const timeToRead = totalWords / 200
 
   return Math.round(timeToRead).toString()
 }
 
 const dataToPost = (post) => {
-  const body = getHtml(post.data.body)
+  const body = post.data.simple_body || post.data.body
   const readTime = getReadTime(body)
 
   return {
@@ -39,6 +40,7 @@ const dataToPost = (post) => {
     title: getText(post.data.title),
     subtitle: getText(post.data.subtitle),
     published: post.data.published || post.first_publication_date,
+    slices: post.data.body1,
     body
   }
 }

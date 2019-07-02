@@ -275,7 +275,7 @@ span.post-read-more a:hover {
 
 .article-post {
   font-family: Merriweather;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 1.8;
   color: rgba(0, 0, 0, .8);
 }
@@ -285,6 +285,12 @@ blockquote {
   padding: 0 20px;
   font-style: italic;
   color: rgba(0, 0, 0, .5);
+}
+
+.article-post h3 {
+  color: #8D8D8D;
+  font-weight: 300;
+  font-size: 1.3em;
 }
 
 .article-post p,

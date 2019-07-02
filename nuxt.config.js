@@ -41,7 +41,8 @@ export default {
    ** Global CSS
    */
   css: [
-    '@/assets/css/theme.css'
+    '@/assets/css/theme.css',
+    'highlight.js/styles/hybrid.css'
   ],
   /*
    ** Plugins to load before mounting the App

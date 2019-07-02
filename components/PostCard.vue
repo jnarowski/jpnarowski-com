@@ -37,6 +37,12 @@ export default {
     },
   },
   computed: {
+    thumbnailUrl() {
+      if (!this.featuredImage) {
+        return ''
+      }
+      return this.featuredImage.Thumbnail.url
+    },
     imageUrl() {
       if (!this.featuredImage) {
         return ''
@@ -58,7 +64,7 @@ export default {
           <i class="fas fa-book" style="font-size: 7em; margin-top: 55px"></i>
         </div>
       </div>
-      <img v-if="featuredImage.url" class="img-fluid" :src="imageUrl" alt />
+      <img v-if="featuredImage.url" class="img-fluid" :src="thumbnailUrl" alt />
     </a>
     <div class="card-block">
       <h2 class="card-title">
