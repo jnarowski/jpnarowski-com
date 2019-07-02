@@ -7,6 +7,12 @@ export default {
   components: {
     PostCard,
   },
+  head() {
+    return {
+      title:
+        "JP's Musings - Exploring the Intersection of Travel, Self Care, and Entrepreneurship.",
+    }
+  },
   data: () => ({
     backgroundImage,
   }),
