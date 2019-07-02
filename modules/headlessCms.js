@@ -67,3 +67,15 @@ export const getPosts = async function () {
 
   return resp.results.map(d => dataToPost(d))
 }
+
+export const getPostsByTag = async function (tag) {
+  const api = await getApi()
+
+  // Prismic.Predicates.at('document.tags', ['featured'])
+  const resp = await api.query([
+    Prismic.Predicates.at('document.type', 'blog-post'),
+    Prismic.Predicates.at('document.tags', [tag])
+  ])
+
+  return resp.results.map(d => dataToPost(d))
+}

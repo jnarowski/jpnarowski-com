@@ -118,7 +118,7 @@ export default {
           <div class="after-post-tags">
             <ul class="tags">
               <li v-for="tag in tags" :key="tag">
-                <a href="#">{{ tag }}</a>
+                <nuxt-link :to="'/posts/tagged/' + tag">{{ tag }}</nuxt-link>
               </li>
             </ul>
           </div>

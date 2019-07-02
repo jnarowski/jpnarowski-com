@@ -68,13 +68,9 @@ export default {
     </a>
     <div class="card-block">
       <h2 class="card-title">
-        <nuxt-link :to="slug">
-          {{ title }}
-        </nuxt-link>
+        <nuxt-link :to="'/' + slug">{{ title }}</nuxt-link>
       </h2>
-      <h4 v-if="subtitle" class="card-text">
-        {{ subtitle }}
-      </h4>
+      <h4 v-if="subtitle" class="card-text">{{ subtitle | truncate(75) }}</h4>
       <div class="metafooter">
         <div class="wrapfooter">
           <span class="meta-footer-thumb">

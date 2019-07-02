@@ -46,7 +46,9 @@ export default {
 
 <template>
   <div class="container">
-    <div v-if="!reviews.length">Loading reviews...</div>
+    <div v-if="!reviews.length">
+      Loading reviews...
+    </div>
     <div class="section-title mt-4">
       <h2 class="mb-2">
         <span>Reading</span>
