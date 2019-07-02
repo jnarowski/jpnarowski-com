@@ -46,20 +46,18 @@ export default {
 
 <template>
   <div class="container">
-    <div v-if="!reviews.length">
-      Loading reviews...
-    </div>
+    <div v-if="!reviews.length">Loading reviews...</div>
     <div class="section-title mt-4">
       <h2 class="mb-2">
         <span>Reading</span>
       </h2>
     </div>
-    <b-row>
+    <b-row class="mt-4">
       <b-col v-for="review in reviewsReading" :key="review.id">
         <book-card :review="review"></book-card>
       </b-col>
     </b-row>
-    <div class="section-title mt-4">
+    <div class="section-title mt-4 mb-4">
       <h2 class="mb-2">
         <span>Read</span>
       </h2>
