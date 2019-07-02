@@ -19,15 +19,27 @@ export const getHtml = (content) => {
   return PrismicDom.RichText.asHtml(content)
 }
 
+const getReadTime = (body) => {
+  const totalWords = body.trim().split(/\s+/).length
+  const timeToRead = totalWords / 200
+
+  return Math.round(timeToRead).toString()
+}
+
 const dataToPost = (post) => {
+  const body = getHtml(post.data.body)
+  const readTime = getReadTime(body)
+
   return {
     post,
-    uid: post.uid,
+    slug: post.uid,
     tags: post.tags,
+    readTime,
     featuredImage: post.data.featured_image,
     title: getText(post.data.title),
     subtitle: getText(post.data.subtitle),
-    body: getHtml(post.data.body)
+    published: post.data.published || post.first_publication_date,
+    body
   }
 }
 
@@ -41,11 +53,15 @@ export const getPost = async function (uid) {
 export const getPosts = async function () {
   const api = await getApi()
 
-  const resp = await api.query(
-    Prismic.Predicates.at('document.type', 'blog-post'), {
-      lang: 'en-us'
-    }
-  )
+  // Prismic.Predicates.at('document.tags', ['featured'])
+  const resp = await api.query([
+    Prismic.Predicates.at('document.type', 'blog-post'),
+    Prismic.Predicates.at('my.blog-post.post-type', 'Post')
+  ], {
+    pageSize: 9,
+    page: 1,
+    orderings: '[my.blog-post.published desc]'
+  })
 
   return resp.results.map(d => dataToPost(d))
 }

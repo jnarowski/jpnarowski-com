@@ -20,13 +20,13 @@ export default {
       content: pkg.description
     }
     ],
+    script: [{
+      src: 'https://kit.fontawesome.com/449a05d47f.js'
+    }],
     link: [{
       rel: 'icon',
       type: 'image/x-icon',
       href: '/favicon.ico'
-    }, {
-      href: 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css',
-      rel: 'stylesheet'
     }, {
       href: 'https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i',
       rel: 'stylesheet'
@@ -46,10 +46,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [
-    '~/plugins/link-resolver.js'
-    // '~/plugins/prismic-vue.js'
-  ],
+  plugins: [],
   /*
    ** Nuxt.js modules
    */
@@ -58,7 +55,13 @@ export default {
     'bootstrap-vue/nuxt',
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/eslint-module'
+    '@nuxtjs/eslint-module',
+    // ['prismic-nuxt', {
+    //   endpoint: 'https://jpnarowski.cdn.prismic.io/api/v2',
+    //   linkResolver: function (doc, ctx) {
+    //     return '/'
+    //   }
+    // }]
   ],
   /*
    ** Axios module configuration

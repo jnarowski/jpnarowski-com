@@ -93,6 +93,7 @@ section {
   font-size: 1.3rem;
   font-weight: 700;
   line-height: 1.25;
+  min-height: 49px;
 }
 
 .listfeaturedtag h2.card-title a,
