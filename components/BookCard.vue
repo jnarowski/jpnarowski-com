@@ -31,12 +31,11 @@ export default {
       </div>
     </div>
     <div class="book-meta">
-      <div v-if="review.read_at" class="read">
-        Read {{ review.read_at | formatDate }}
-      </div>
-      <div v-if="review.started_at" class="started">
-        Started {{ review.started_at | formatDate }}
-      </div>
+      <div v-if="review.read_at" class="read">Read {{ review.read_at | formatDate }}</div>
+      <div
+        v-if="!review.read_at && review.started_at"
+        class="started"
+      >Started {{ review.started_at | formatDate }}</div>
     </div>
   </b-card>
 </template>
