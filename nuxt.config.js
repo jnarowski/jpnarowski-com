@@ -54,6 +54,8 @@ export default {
    ** Nuxt.js modules
    */
   modules: [
+    // Doc: https://github.com/robcresswell/nuxt-compress
+    'nuxt-compress',
     // Doc: https://bootstrap-vue.js.org/docs/
     'bootstrap-vue/nuxt',
     // Doc: https://axios.nuxtjs.org/usage
@@ -64,6 +66,9 @@ export default {
       linkResolver: function (doc, ctx) {
         return '/'
       }
+    }],
+    ['@nuxtjs/google-analytics', {
+      id: 'UA-7419920-14'
     }]
   ],
   /*
