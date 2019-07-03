@@ -34,8 +34,12 @@ export default {
           <slot name="avatar"></slot>
         </div>
         <a class="podcast-item--title" target="_BLANK" :href="link">{{ title }}</a>
-        <div class="podcast-item--subtitle">{{ subtitle }}</div>
-        <div class="podcast-item--date">{{ date }}</div>
+        <div class="podcast-item--subtitle">
+          {{ subtitle }}
+        </div>
+        <div class="podcast-item--date">
+          {{ date }}
+        </div>
       </b-col>
     </b-row>
   </b-card>
