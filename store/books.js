@@ -22,7 +22,7 @@ export const actions = {
   async loadAll({ commit }) {
     // const data = await $axios.$get('https://www.goodreads.com/review/list/15038585.xml?key=05pAK5L384cTgNJwktUA&v=2')
 
-    const data = await this.$axios.$get('http://cors-anywhere.herokuapp.com/https://www.goodreads.com/review/list/15038585.xml', {
+    const data = await this.$axios.$get('https://cors-anywhere.herokuapp.com/https://www.goodreads.com/review/list/15038585.xml', {
       params: {
         key: '05pAK5L384cTgNJwktUA',
         v: 2,
