@@ -13,11 +13,6 @@ export default {
     {
       name: 'viewport',
       content: 'width=device-width, initial-scale=1, shrink-to-fit=no'
-    },
-    {
-      hid: 'description',
-      name: 'description',
-      content: pkg.description
     }
     ],
     script: [{
@@ -36,7 +31,10 @@ export default {
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: '#fff' },
+  loading: {
+    color: '#03a87c',
+    height: '5px'
+  },
   /*
    ** Global CSS
    */

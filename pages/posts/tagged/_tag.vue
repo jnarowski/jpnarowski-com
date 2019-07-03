@@ -35,8 +35,8 @@ export default {
         <div class="section-title">
           <h2>
             <span>
-              Posts Tagged '
-              <strong>{{ tag }}</strong>'
+              Posts Tagged
+              <strong>{{ tag }}</strong>
             </span>
           </h2>
         </div>

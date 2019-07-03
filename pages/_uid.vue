@@ -8,6 +8,31 @@ export default {
     AuthorFooter,
     PostContent,
   },
+  head() {
+    return {
+      title: this.title,
+      meta: [
+        { charset: 'utf-8' },
+        {
+          name: 'article:author',
+          content: 'https://www.facebook.com/john.narowski',
+        },
+        { name: 'article:section', content: this.tags && this.tags[0] },
+        { name: 'article:published_time', content: this.published },
+        { name: 'article:modified_time', content: this.updated },
+        { name: 'og:locale', content: 'en_US' },
+        { name: 'og:type', content: 'article' },
+        { name: 'og:title', content: this.title },
+        { name: 'og:description', content: this.metaDescription },
+        { name: 'og:url', content: this.fullUrl },
+        { name: 'og:site_name', content: 'JPs Musings' },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:description', content: this.metaDescription },
+        { name: 'twitter:title', content: this.title },
+        { name: 'twitter:creator', content: '@jpnarowski' },
+      ],
+    }
+  },
   data: () => ({
     title: null,
   }),
@@ -16,16 +41,15 @@ export default {
       return 'https://jpnarowski.com' + this.$route.fullPath
     },
   },
-  head() {
-    return {
-      title: this.title,
-    }
-  },
   async asyncData(context) {
-    const { params, error } = context
+    const { params, error, store } = context
 
     try {
-      const post = await getPost(params.uid)
+      let post = store.getters['posts/listFindBySlug'](params.uid)
+
+      if (!post) {
+        post = await getPost(params.uid)
+      }
 
       context.title = post.title
 
@@ -118,7 +142,9 @@ export default {
           <div class="after-post-tags">
             <ul class="tags">
               <li v-for="tag in tags" :key="tag">
-                <nuxt-link :to="'/posts/tagged/' + tag">{{ tag }}</nuxt-link>
+                <nuxt-link :to="'/posts/tagged/' + tag">
+                  {{ tag }}
+                </nuxt-link>
               </li>
             </ul>
           </div>

@@ -24,10 +24,10 @@ export default {
     </div>
     <div class="right">
       <div class="title">
-        <a :href="book.link">{{ book.title | truncate(70) | sanitize }}</a>
+        <a target="_BLANK" :href="book.link">{{ book.title | truncate(70) | sanitize }}</a>
       </div>
       <div class="author">
-        <a :href="author.link">{{ author.name }}</a>
+        <a target="_BLANK" :href="author.link">{{ author.name }}</a>
       </div>
     </div>
     <div class="book-meta">
