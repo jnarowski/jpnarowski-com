@@ -61,7 +61,7 @@ export default {
           class="text-center"
           style="height: 217px; width: 355px; background: #ECECEC; color: #1B5594"
         >
-          <i class="fas fa-book" style="font-size: 7em; margin-top: 55px"></i>
+          <fa :icon="['fas', 'fa-book']" style="font-size: 7em; margin-top: 55px" />
         </div>
       </div>
       <img v-if="featuredImage.url" class="img-fluid" :src="thumbnailUrl" alt />

@@ -15,9 +15,9 @@ export default {
       content: 'width=device-width, initial-scale=1, shrink-to-fit=no'
     }
     ],
-    script: [{
-      src: 'https://kit.fontawesome.com/449a05d47f.js'
-    }],
+    // script: [{
+    //   src: 'https://kit.fontawesome.com/449a05d47f.js'
+    // }],
     link: [{
       rel: 'icon',
       type: 'image/x-icon',
@@ -40,12 +40,13 @@ export default {
    */
   css: [
     '@/assets/css/theme.css',
-    'highlight.js/styles/hybrid.css'
+    'highlight.js/styles/hybrid.css',
+    '@fortawesome/fontawesome-svg-core/styles.css'
   ],
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/filters'],
+  plugins: ['~/plugins/filters', '~/plugins/fontawesome.js'],
   /*
    ** Nuxt.js modules
    */

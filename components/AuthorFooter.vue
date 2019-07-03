@@ -23,7 +23,7 @@
       <ul class="authorsocial">
         <li>
           <a href="http://twitter.com/jpnarowski" target="_blank" class="socialdark twitter">
-            <i class="fab fa-twitter" />
+            <fa :icon="['fab', 'twitter']" />
           </a>
         </li>
         <li>
@@ -32,7 +32,7 @@
             target="_blank"
             class="socialdark facebook"
           >
-            <i class="fab fa-facebook-f" />
+            <fa :icon="['fab', 'facebook-f']" />
           </a>
         </li>
         <li>
@@ -41,7 +41,7 @@
             target="_blank"
             class="socialdark linkedin"
           >
-            <i class="fab fa-linkedin-in" />
+            <fa :icon="['fab', 'linkedin-in']" />
           </a>
         </li>
         <li>
@@ -50,7 +50,7 @@
             target="_blank"
             class="socialdark flickr"
           >
-            <i class="fab fa-flickr" />
+            <fa :icon="['fab', 'flickr']" />
           </a>
         </li>
       </ul>
