@@ -2,10 +2,12 @@
 import { getPosts } from './../modules/headlessCms'
 import backgroundImage from '~/assets/img/demopic/1.jpg'
 import PostCard from '@/components/PostCard'
+import PodcastCard from '@/components/PodcastCard'
 
 export default {
   components: {
     PostCard,
+    PodcastCard,
   },
   head() {
     return {
@@ -54,6 +56,78 @@ export default {
           </nuxt-link>
         </div>
       </section>
+      <section class="featured-posts">
+        <div class="section-title">
+          <h2>
+            <span>Recent Podcasts</span>
+          </h2>
+        </div>
+        <div>
+          <podcast-card
+            title="Clickflow & Talklaunch"
+            subtitle="TalkLaunch w/ Ryan Estes"
+            date="May 16th, 2019"
+            link="https://www.talklaunch.net/8658/clickflow/"
+          >
+            <template v-slot:avatar>
+              <img class="podcast-item--avatar" :src="require('@/assets/img/avatars/RyanEstes.png')"></img>
+            </template>
+          </podcast-card>
+          <podcast-card
+            title="CRM for Speakers Passes $30k in MRR"
+            subtitle="Mixergy w/ Nathan Latka"
+            date="Jan 23rd, 2019"
+            link="https://getlatka.com/companies/karmacrm"
+          >
+            <template v-slot:avatar>
+              <img class="podcast-item--avatar" :src="require('@/assets/img/avatars/NathanLatka.jpg')"></img>
+            </template>
+          </podcast-card>
+          <podcast-card
+            title="How to Achieve Work Life Harmony"
+            subtitle="Sustainable Success w/ Chris Salem"
+            date="May 3rd, 2018"
+            link="https://www.voiceamerica.com/episode/106815/how-to-achieve-work-life-harmony"
+          >
+            <template v-slot:avatar>
+              <img class="podcast-item--avatar" :src="require('@/assets/img/avatars/ChristopherSalem.jpg')"></img>
+            </template>
+          </podcast-card>
+          <podcast-card
+            title="270: John-Paul Narowski, KarmaCRM"
+            subtitle="Crack the Customer Code"
+            date="August 29th, 2017"
+            link="https://www.stitcher.com/podcast/crack-the-customer-code/e/51279896"
+          >
+            <template v-slot:avatar>
+              <img class="podcast-item--avatar" :src="require('@/assets/img/avatars/AdamToporek.jpg')"></img>
+              <img class="podcast-item--avatar" :src="require('@/assets/img/avatars/JeannieWalters.jpg')"></img>
+            </template>
+          </podcast-card>
+        </div>
+      </section>
     </div>
   </div>
 </template>
+
+<style>
+.podcast-item--left {
+  background: whiteSmoke;
+  border-right: 1px solid rgba(0, 0, 0, 0.125);
+  padding: 10px;
+}
+.podcast-item--right {
+  padding: 10px;
+}
+.podcast-item--icon {
+  background: whiteSmoke;
+  border-right: 1px solid rgba(0, 0, 0, 0.125);
+  padding: 10px;
+}
+.podcast-item--title {
+  font-size: 1.2em;
+}
+.podcast-item--date {
+  color: rgba(0, 0, 0, 0.44);
+}
+</style>

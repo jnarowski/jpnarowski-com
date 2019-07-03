@@ -2,11 +2,11 @@ import pkg from './package'
 
 export default {
   mode: 'universal',
-  /*
-   ** Headers of the page
-   */
   head: {
     title: pkg.name,
+    htmlAttrs: {
+      lang: 'en'
+    },
     meta: [{
       charset: 'utf-8'
     },
