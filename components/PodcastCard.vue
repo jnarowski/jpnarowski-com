@@ -33,7 +33,7 @@ export default {
         <div v-if="$slots.avatar" class="float-right d-none d-sm-block">
           <slot name="avatar"></slot>
         </div>
-        <a class="podcast-item--title" :href="link">{{ title }}</a>
+        <a class="podcast-item--title" target="_BLANK" :href="link">{{ title }}</a>
         <div class="podcast-item--subtitle">{{ subtitle }}</div>
         <div class="podcast-item--date">{{ date }}</div>
       </b-col>
