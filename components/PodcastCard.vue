@@ -23,21 +23,19 @@ export default {
 
 <template>
   <b-card no-body class="mb-3">
-    <b-row class="no-gutters">
-      <b-col cols="1" class="d-none d-sm-block text-center podcast-item--left">
-        <fa style="font-size: 3em; color: #0096ab" :icon="['fas', 'podcast']" />
+    <b-row class="h-100 no-gutters">
+      <b-col cols="1" class="d-none d-sm-block">
+        <div class="podcast-item--left d-flex align-items-center justify-content-center h-100">
+          <fa style="font-size: 3em; color: #0096ab" :icon="['fas', 'podcast']" />
+        </div>
       </b-col>
       <b-col cols="11" style="padding: 10px;">
         <div v-if="$slots.avatar" class="float-right d-none d-sm-block">
           <slot name="avatar"></slot>
         </div>
         <a class="podcast-item--title" :href="link">{{ title }}</a>
-        <div class="podcast-item--subtitle">
-          {{ subtitle }}
-        </div>
-        <div class="podcast-item--date">
-          {{ date }}
-        </div>
+        <div class="podcast-item--subtitle">{{ subtitle }}</div>
+        <div class="podcast-item--date">{{ date }}</div>
       </b-col>
     </b-row>
   </b-card>
