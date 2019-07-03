@@ -46,7 +46,10 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/filters', '~/plugins/fontawesome.js'],
+  plugins: [
+    '~/plugins/filters',
+    '~/plugins/fontawesome.js'
+  ],
   /*
    ** Nuxt.js modules
    */
