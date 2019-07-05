@@ -51,7 +51,7 @@ export default {
     },
     ariaLabel() {
       return 'Read more about ' + this.title
-    }
+    },
   },
 }
 </script>
@@ -67,7 +67,11 @@ export default {
           <fa :icon="['fas', 'fa-book']" style="font-size: 7em; margin-top: 55px" />
         </div>
       </div>
-      <img v-if="featuredImage.url" v-lazy="thumbnailUrl" class="img-fluid" alt />
+      <picture v-if="featuredImage.url" class="img-fluid">
+        <source :srcset="thumbnailUrl + '?webp'" type="image/webp" />
+        <source :srcset="thumbnailUrl" type="image/jpeg" />
+        <img :src="thumbnailUrl" />
+      </picture>
     </nuxt-link>
     <div class="card-block">
       <h2 class="card-title">

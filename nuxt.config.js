@@ -59,6 +59,8 @@ export default {
     'nuxt-compress',
     // Doc: https://bootstrap-vue.js.org/docs/
     'bootstrap-vue/nuxt',
+    // Doc: https://www.bazzite.com/docs/nuxt-optimized-images/usage/#query-params
+    '@bazzite/nuxt-optimized-images',
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/eslint-module',
