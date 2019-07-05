@@ -1,9 +1,8 @@
 <script>
-const CodeSlice = () => import('@/components/slices/CodeSlice.vue')
-const QuoteSlice = () => import('@/components/slices/QuoteSlice.vue')
-const TextSlice = () => import('@/components/slices/TextSlice.vue')
-const ImageCaptionSlice = () =>
-  import('@/components/slices/ImageCaptionSlice.vue')
+const CodeSlice = () => import('@/components/slices/CodeSlice')
+const QuoteSlice = () => import('@/components/slices/QuoteSlice')
+const TextSlice = () => import('@/components/slices/TextSlice')
+const ImageCaptionSlice = () => import('@/components/slices/ImageCaptionSlice')
 
 export default {
   components: {

@@ -1,5 +1,5 @@
 <script>
-import CodeHighlight from '@/components/CodeHighlight'
+const CodeHighlight = () => import('@/components/CodeHighlight')
 
 export default {
   components: {
