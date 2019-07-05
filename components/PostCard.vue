@@ -73,18 +73,14 @@ export default {
         </div>
       </div>
       <div class="post-image--container">
-        <img :src="thumbnailUrl" alt="Dude..." class="post-image" />
+        <img :src="thumbnailUrl" :alt="'Read the '+title+' post'" class="post-image" />
       </div>
     </nuxt-link>
     <div class="card-block">
       <h2 class="card-title">
-        <nuxt-link :aria-label="ariaLabel" :to="'/' + slug">
-          {{ title }}
-        </nuxt-link>
+        <nuxt-link :aria-label="ariaLabel" :to="'/' + slug">{{ title }}</nuxt-link>
       </h2>
-      <h4 v-if="subtitle" class="card-text">
-        {{ subtitle | truncate(75) }}
-      </h4>
+      <h4 v-if="subtitle" class="card-text">{{ subtitle | truncate(75) }}</h4>
       <div class="metafooter">
         <div class="wrapfooter">
           <span class="meta-footer-thumb">
@@ -120,25 +116,21 @@ export default {
 .post-image:before {
   content: ' ';
   display: block;
-
   position: absolute;
   top: -10px;
   left: 0;
   height: calc(100% + 10px);
   width: 100%;
   background-color: rgb(230, 230, 230);
-  border: 2px dotted rgb(200, 200, 200);
   border-radius: 5px;
 }
 
 .post-image:after {
-  content: '\f127'' Broken Image of ' attr(alt);
+  content: 'Loading...';
   display: block;
   font-size: 16px;
   font-style: normal;
-  font-family: FontAwesome;
   color: rgb(100, 100, 100);
-
   position: absolute;
   top: 5px;
   left: 0;
