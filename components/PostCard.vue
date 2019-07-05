@@ -72,8 +72,8 @@ export default {
           <fa :icon="['fas', 'fa-book']" style="font-size: 7em; margin-top: 55px" />
         </div>
       </div>
-      <div v-lazy-container="{ selector: 'img' }" class="post-image--container">
-        <img :data-src="thumbnailUrl" />
+      <div class="post-image--container">
+        <img v-lazy="thumbnailUrl" />
       </div>
     </nuxt-link>
     <div class="card-block">
