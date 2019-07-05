@@ -61,7 +61,7 @@ export default {
           <post-card v-for="post in results" :key="post.uid" v-bind="post"></post-card>
         </div>
         <div class="text-center">
-          <nuxt-link class="btn btn-secondary" to="/posts">
+          <nuxt-link class="btn btn-secondary mb-3" to="/posts">
             See all posts
           </nuxt-link>
         </div>

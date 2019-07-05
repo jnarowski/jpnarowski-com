@@ -16,7 +16,9 @@ export default {
 
 <template>
   <div class="post-part single">
-    <blockquote class="block-quotation">{{ asText(slice.primary.quote) }}</blockquote>
+    <blockquote class="block-quotation">
+      {{ asText(slice.primary.quote) }}
+    </blockquote>
   </div>
 </template>
 
