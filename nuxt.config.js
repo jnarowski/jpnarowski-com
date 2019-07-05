@@ -15,17 +15,20 @@ export default {
       content: 'width=device-width, initial-scale=1, shrink-to-fit=no'
     }
     ],
-    // script: [{
-    //   src: 'https://kit.fontawesome.com/449a05d47f.js'
-    // }],
     link: [{
       rel: 'icon',
       type: 'image/x-icon',
       href: '/favicon.ico'
     }, {
+      rel: 'preconnect',
+      href: 'https://fonts.gstatic.com/',
+      crossorigin: true
+    },
+    {
       href: 'https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i',
       rel: 'stylesheet'
-    }]
+    }
+    ]
   },
 
   /*

@@ -1,6 +1,7 @@
 <script>
-import PostCard from '@/components/PostCard'
 import { searchPosts } from '@/modules/headlessCms'
+
+const PostCard = () => import('@/components/PostCard')
 
 export default {
   components: {

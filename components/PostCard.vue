@@ -1,6 +1,6 @@
 <script>
 import dayjs from 'dayjs'
-import AvatarImage from '@/components/AvatarImage'
+const AvatarImage = () => import('@/components/AvatarImage')
 
 export default {
   components: {
@@ -73,7 +73,7 @@ export default {
         </div>
       </div>
       <div class="post-image--container">
-        <img v-lazy="thumbnailUrl" />
+        <img alt v-lazy="thumbnailUrl" />
       </div>
     </nuxt-link>
     <div class="card-block">

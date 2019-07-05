@@ -1,5 +1,6 @@
 <script>
-import Navbar from '~/components/Navbar'
+const Navbar = () => import('@/components/Navbar')
+
 export default {
   components: {
     Navbar,

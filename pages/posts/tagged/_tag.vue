@@ -1,6 +1,6 @@
 <script>
 import { getPostsByTag } from '@/modules/headlessCms'
-import PostCard from '@/components/PostCard'
+const PostCard = () => import('@/components/PostCard')
 
 export default {
   components: {

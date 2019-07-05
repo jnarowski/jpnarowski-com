@@ -1,7 +1,8 @@
 <script>
 import { getPost } from '@/modules/headlessCms'
-import AuthorFooter from '@/components/AuthorFooter'
-import PostContent from '@/components/PostContent'
+
+const AuthorFooter = () => import('@/components/AuthorFooter')
+const PostContent = () => import('@/components/PostContent')
 
 export default {
   components: {
@@ -142,9 +143,7 @@ export default {
           <div class="after-post-tags">
             <ul class="tags">
               <li v-for="tag in tags" :key="tag">
-                <nuxt-link :to="'/posts/tagged/' + tag">
-                  {{ tag }}
-                </nuxt-link>
+                <nuxt-link :to="'/posts/tagged/' + tag">{{ tag }}</nuxt-link>
               </li>
             </ul>
           </div>
