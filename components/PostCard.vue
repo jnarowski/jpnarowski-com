@@ -67,21 +67,13 @@ export default {
           <fa :icon="['fas', 'fa-book']" style="font-size: 7em; margin-top: 55px" />
         </div>
       </div>
-      <picture v-if="featuredImage.url" class="img-fluid">
-        <source :srcset="thumbnailUrl + '?webp'" type="image/webp" />
-        <source :srcset="thumbnailUrl" type="image/jpeg" />
-        <img v-lazy="thumbnailUrl" />
-      </picture>
+      <img v-lazy="thumbnailUrl" />
     </nuxt-link>
     <div class="card-block">
       <h2 class="card-title">
-        <nuxt-link :aria-label="ariaLabel" :to="'/' + slug">
-          {{ title }}
-        </nuxt-link>
+        <nuxt-link :aria-label="ariaLabel" :to="'/' + slug">{{ title }}</nuxt-link>
       </h2>
-      <h4 v-if="subtitle" class="card-text">
-        {{ subtitle | truncate(75) }}
-      </h4>
+      <h4 v-if="subtitle" class="card-text">{{ subtitle | truncate(75) }}</h4>
       <div class="metafooter">
         <div class="wrapfooter">
           <span class="meta-footer-thumb">

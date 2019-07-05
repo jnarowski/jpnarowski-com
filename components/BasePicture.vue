@@ -7,8 +7,8 @@ export default {
     },
   },
   computed: {
-    image() {
-      return '@/assets/img/avatars/NathanLatka.jpg'
+    imageSrc() {
+      return 'img/avatars/NathanLatka.jpg'
     },
   },
 }

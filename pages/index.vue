@@ -71,7 +71,14 @@ export default {
             link="https://www.talklaunch.net/8658/clickflow/"
           >
             <template v-slot:avatar>
-              <img class="podcast-item--avatar" :src="require('@/assets/img/avatars/RyanEstes.jpg?webp')"></img>
+              <base-picture class="img-fluid podcast-item--avatar">
+                <source
+                  :srcset="require('~/assets/img/avatars/RyanEstes.jpg' + '?webp')"
+                  type="image/webp"
+                />
+                <source :srcset="require('~/assets/img/avatars/RyanEstes.jpg')" type="image/jpeg" />
+                <img v-lazy="require('~/assets/img/avatars/RyanEstes.jpg')" />
+              </base-picture>
             </template>
           </podcast-card>
           <podcast-card
@@ -82,9 +89,12 @@ export default {
           >
             <template v-slot:avatar>
               <base-picture class="img-fluid podcast-item--avatar">
-                <source :srcset="require('@/assets/img/avatars/NathanLatka.jpg' + '?webp')" type="image/webp" />
-                <source :srcset="require('@/assets/img/avatars/NathanLatka.jpg')" type="image/jpeg" />
-                <img v-lazy="'@/assets/img/avatars/NathanLatka.jpg'" />
+                <source
+                  :srcset="require('~/assets/img/avatars/NathanLatka.jpg' + '?webp')"
+                  type="image/webp"
+                />
+                <source :srcset="require('~/assets/img/avatars/NathanLatka.jpg')" type="image/jpeg" />
+                <img v-lazy="require('~/assets/img/avatars/NathanLatka.jpg')" />
               </base-picture>
             </template>
           </podcast-card>
@@ -95,11 +105,17 @@ export default {
             link="https://www.voiceamerica.com/episode/106815/how-to-achieve-work-life-harmony"
           >
             <template v-slot:avatar>
-              <img
-                v-lazy="require('@/assets/img/avatars/ChristopherSalem.jpg?webp')"
-                class="podcast-item--avatar"
-              >
-              </img>
+              <base-picture class="img-fluid podcast-item--avatar">
+                <source
+                  :srcset="require('~/assets/img/avatars/ChristopherSalem.jpg' + '?webp')"
+                  type="image/webp"
+                />
+                <source
+                  :srcset="require('~/assets/img/avatars/ChristopherSalem.jpg')"
+                  type="image/jpeg"
+                />
+                <img v-lazy="require('~/assets/img/avatars/ChristopherSalem.jpg')" />
+              </base-picture>
             </template>
           </podcast-card>
           <podcast-card
@@ -109,8 +125,25 @@ export default {
             link="https://www.stitcher.com/podcast/crack-the-customer-code/e/51279896"
           >
             <template v-slot:avatar>
-              <img v-lazy="require('@/assets/img/avatars/AdamToporek.jpg?webp')" class="podcast-item--avatar"></img>
-              <img v-lazy="require('@/assets/img/avatars/JeannieWalters.jpg?webp')" class="podcast-item--avatar"></img>
+              <base-picture class="img-fluid podcast-item--avatar">
+                <source
+                  :srcset="require('~/assets/img/avatars/AdamToporek.jpg' + '?webp')"
+                  type="image/webp"
+                />
+                <source :srcset="require('~/assets/img/avatars/AdamToporek.jpg')" type="image/jpeg" />
+                <img v-lazy="require('~/assets/img/avatars/AdamToporek.jpg')" />
+              </base-picture>
+              <base-picture class="img-fluid podcast-item--avatar">
+                <source
+                  :srcset="require('~/assets/img/avatars/JeannieWalters.jpg' + '?webp')"
+                  type="image/webp"
+                />
+                <source
+                  :srcset="require('~/assets/img/avatars/JeannieWalters.jpg')"
+                  type="image/jpeg"
+                />
+                <img v-lazy="require('~/assets/img/avatars/JeannieWalters.jpg')" />
+              </base-picture>
             </template>
           </podcast-card>
         </div>
