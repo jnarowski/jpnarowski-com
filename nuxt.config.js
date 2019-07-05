@@ -23,6 +23,10 @@ export default {
       rel: 'preconnect',
       href: 'https://fonts.gstatic.com/',
       crossorigin: true
+    }, {
+      rel: 'preconnect',
+      href: '//www.google-analytics.com',
+      crossorigin: true
     },
     {
       href: 'https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i',
