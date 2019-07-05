@@ -73,7 +73,7 @@ export default {
         </div>
       </div>
       <div class="post-image--container">
-        <img :src="thumbnailUrl" class="post-image" />
+        <img :src="thumbnailUrl" alt="Dude..." class="post-image" />
       </div>
     </nuxt-link>
     <div class="card-block">
@@ -112,8 +112,37 @@ export default {
   background: whiteSmoke;
 }
 
-.post-image:not([src]) {
+/* .post-image:not([src]) {
   font-size: 0;
   position: relative;
+} */
+
+.post-image:before {
+  content: ' ';
+  display: block;
+
+  position: absolute;
+  top: -10px;
+  left: 0;
+  height: calc(100% + 10px);
+  width: 100%;
+  background-color: rgb(230, 230, 230);
+  border: 2px dotted rgb(200, 200, 200);
+  border-radius: 5px;
+}
+
+.post-image:after {
+  content: '\f127'' Broken Image of ' attr(alt);
+  display: block;
+  font-size: 16px;
+  font-style: normal;
+  font-family: FontAwesome;
+  color: rgb(100, 100, 100);
+
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 100%;
+  text-align: center;
 }
 </style>
