@@ -3,9 +3,10 @@ import { getPosts } from './../modules/headlessCms'
 import backgroundImage from '~/assets/img/demopic/1.jpg'
 import PostCard from '@/components/PostCard'
 import PodcastCard from '@/components/PodcastCard'
-
+import BasePicture from '@/components/BasePicture'
 export default {
   components: {
+    BasePicture,
     PostCard,
     PodcastCard,
   },
@@ -70,7 +71,7 @@ export default {
             link="https://www.talklaunch.net/8658/clickflow/"
           >
             <template v-slot:avatar>
-              <img class="podcast-item--avatar" :src="require('@/assets/img/avatars/RyanEstes.png')"></img>
+              <img class="podcast-item--avatar" :src="require('@/assets/img/avatars/RyanEstes.jpg?webp')"></img>
             </template>
           </podcast-card>
           <podcast-card
@@ -80,7 +81,11 @@ export default {
             link="https://getlatka.com/companies/karmacrm"
           >
             <template v-slot:avatar>
-              <img v-lazy="require('@/assets/img/avatars/NathanLatka.jpg')" class="podcast-item--avatar"></img>
+              <base-picture class="img-fluid podcast-item--avatar">
+                <source :srcset="require('@/assets/img/avatars/NathanLatka.jpg' + '?webp')" type="image/webp" />
+                <source :srcset="require('@/assets/img/avatars/NathanLatka.jpg')" type="image/jpeg" />
+                <img v-lazy="'@/assets/img/avatars/NathanLatka.jpg'" />
+              </base-picture>
             </template>
           </podcast-card>
           <podcast-card
@@ -90,7 +95,11 @@ export default {
             link="https://www.voiceamerica.com/episode/106815/how-to-achieve-work-life-harmony"
           >
             <template v-slot:avatar>
-              <img v-lazy="require('@/assets/img/avatars/ChristopherSalem.jpg')" class="podcast-item--avatar"></img>
+              <img
+                v-lazy="require('@/assets/img/avatars/ChristopherSalem.jpg?webp')"
+                class="podcast-item--avatar"
+              >
+              </img>
             </template>
           </podcast-card>
           <podcast-card
@@ -100,8 +109,8 @@ export default {
             link="https://www.stitcher.com/podcast/crack-the-customer-code/e/51279896"
           >
             <template v-slot:avatar>
-              <img class="podcast-item--avatar" :src="require('@/assets/img/avatars/AdamToporek.jpg')"></img>
-              <img class="podcast-item--avatar" :src="require('@/assets/img/avatars/JeannieWalters.jpg')"></img>
+              <img v-lazy="require('@/assets/img/avatars/AdamToporek.jpg?webp')" class="podcast-item--avatar"></img>
+              <img v-lazy="require('@/assets/img/avatars/JeannieWalters.jpg?webp')" class="podcast-item--avatar"></img>
             </template>
           </podcast-card>
         </div>

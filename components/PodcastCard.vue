@@ -34,12 +34,8 @@ export default {
           <slot name="avatar"></slot>
         </div>
         <a class="podcast-item--title" target="_BLANK" :href="link">{{ title }}</a>
-        <div class="podcast-item--subtitle">
-          {{ subtitle }}
-        </div>
-        <div class="podcast-item--date">
-          {{ date }}
-        </div>
+        <div class="podcast-item--subtitle">{{ subtitle }}</div>
+        <div class="podcast-item--date">{{ date }}</div>
       </b-col>
     </b-row>
   </b-card>
@@ -65,7 +61,8 @@ export default {
 .podcast-item--date {
   color: rgba(0, 0, 0, 0.44);
 }
-.podcast-item--avatar {
+.podcast-item--avatar,
+.podcast-item--avatar img {
   border-radius: 50px;
   height: 75px;
   margin-right: 5px;
