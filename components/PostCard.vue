@@ -73,7 +73,7 @@ export default {
         </div>
       </div>
       <div class="post-image--container">
-        <img v-lazy="thumbnailUrl" alt="-" />
+        <img v-lazy="thumbnailUrl" class="post-image" />
       </div>
     </nuxt-link>
     <div class="card-block">
@@ -106,5 +106,10 @@ export default {
   width: 100%;
   height: 237px;
   background: whiteSmoke;
+}
+
+.post-image:not([src]) {
+  font-size: 0;
+  position: relative;
 }
 </style>
