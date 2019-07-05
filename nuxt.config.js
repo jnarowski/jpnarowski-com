@@ -39,6 +39,8 @@ export default {
    ** Global CSS
    */
   css: [
+    'bootstrap/dist/css/bootstrap.css',
+    'bootstrap-vue/dist/bootstrap-vue.css',
     '@/assets/css/theme.css',
     'highlight.js/styles/hybrid.css',
     '@fortawesome/fontawesome-svg-core/styles.css'
@@ -47,6 +49,7 @@ export default {
    ** Plugins to load before mounting the App
    */
   plugins: [
+    '~/plugins/bootstrap.js',
     '~/plugins/filters',
     '~/plugins/fontawesome.js',
     { src: '~/plugins/lazyload', ssr: false }
@@ -58,7 +61,7 @@ export default {
     // Doc: https://github.com/robcresswell/nuxt-compress
     'nuxt-compress',
     // Doc: https://bootstrap-vue.js.org/docs/
-    'bootstrap-vue/nuxt',
+    // 'bootstrap-vue/nuxt',
     // Doc: https://www.bazzite.com/docs/nuxt-optimized-images/usage/#query-params
     '@bazzite/nuxt-optimized-images',
     // Doc: https://axios.nuxtjs.org/usage
@@ -90,6 +93,7 @@ export default {
     /*
      ** You can extend webpack config here
      */
+    analyze: true,
     extend(config, ctx) {
       config.resolve.alias.vue = 'vue/dist/vue.common'
     }

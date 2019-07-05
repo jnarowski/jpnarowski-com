@@ -1,17 +1,18 @@
 import Vue from 'vue'
 import { library, config } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { fas } from '@fortawesome/free-solid-svg-icons'
-import { fab } from '@fortawesome/free-brands-svg-icons'
+import { faBook, faSearch, faPodcast } from '@fortawesome/free-solid-svg-icons'
+import { faFacebookF, faTwitter, faLinkedinIn, faFlickr } from '@fortawesome/free-brands-svg-icons'
 
 // https://github.com/FortAwesome/vue-fontawesome#nuxtjs
 // This is important, we are going to let Nuxt.js worry about the CSS
 config.autoAddCss = false
 
-// You can add your icons directly in this plugin. See other examples for how you
-// can add other styles or just individual icons.
-library.add(fas)
-library.add(fab)
+// fas styles
+library.add([faBook, faSearch, faPodcast])
+
+// fab styles
+library.add([faFacebookF, faTwitter, faLinkedinIn, faFlickr])
 
 // Register the component globally
 Vue.component('fa', FontAwesomeIcon)
