@@ -25,6 +25,9 @@ export default {
 </template>
 
 <style lang="scss">
+.code-highlight {
+  margin: 0 0 1.5rem 0;
+}
 .code-highlight pre {
   margin-bottom: 0px;
   font-size: 0.7em;

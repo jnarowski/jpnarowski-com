@@ -80,7 +80,7 @@ export default {
             link="https://getlatka.com/companies/karmacrm"
           >
             <template v-slot:avatar>
-              <img class="podcast-item--avatar" :src="require('@/assets/img/avatars/NathanLatka.jpg')"></img>
+              <img v-lazy="require('@/assets/img/avatars/NathanLatka.jpg')" class="podcast-item--avatar"></img>
             </template>
           </podcast-card>
           <podcast-card
@@ -90,7 +90,7 @@ export default {
             link="https://www.voiceamerica.com/episode/106815/how-to-achieve-work-life-harmony"
           >
             <template v-slot:avatar>
-              <img class="podcast-item--avatar" :src="require('@/assets/img/avatars/ChristopherSalem.jpg')"></img>
+              <img v-lazy="require('@/assets/img/avatars/ChristopherSalem.jpg')" class="podcast-item--avatar"></img>
             </template>
           </podcast-card>
           <podcast-card

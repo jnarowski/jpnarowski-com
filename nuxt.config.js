@@ -48,7 +48,8 @@ export default {
    */
   plugins: [
     '~/plugins/filters',
-    '~/plugins/fontawesome.js'
+    '~/plugins/fontawesome.js',
+    { src: '~/plugins/lazyload', ssr: false }
   ],
   /*
    ** Nuxt.js modules
