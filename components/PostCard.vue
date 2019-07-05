@@ -1,6 +1,11 @@
 <script>
 import dayjs from 'dayjs'
+import AvatarImage from '@/components/AvatarImage'
+
 export default {
+  components: {
+    AvatarImage,
+  },
   filters: {
     formatDate: (value) => {
       if (!value) {
@@ -67,7 +72,9 @@ export default {
           <fa :icon="['fas', 'fa-book']" style="font-size: 7em; margin-top: 55px" />
         </div>
       </div>
-      <img v-lazy="thumbnailUrl" :alt="title + ' Post Image'" />
+      <div v-lazy-container="{ selector: 'img' }" class="post-image--container">
+        <img :data-src="thumbnailUrl" />
+      </div>
     </nuxt-link>
     <div class="card-block">
       <h2 class="card-title">
@@ -81,11 +88,7 @@ export default {
       <div class="metafooter">
         <div class="wrapfooter">
           <span class="meta-footer-thumb">
-            <img
-              class="author-thumb"
-              src="//0.gravatar.com/avatar/803a0ad71889f0e001ee5b90e71ed48c?s=80"
-              alt="JP"
-            />
+            <avatar-image class="author-thumb"></avatar-image>
           </span>
           <span class="author-meta">
             <span class="post-name">
@@ -101,3 +104,11 @@ export default {
     </div>
   </div>
 </template>
+
+<style>
+.post-image--container {
+  width: 355px;
+  height: 237px;
+  background: whiteSmoke;
+}
+</style>

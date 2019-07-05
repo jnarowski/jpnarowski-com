@@ -9,9 +9,11 @@ export default {
   props: {
     code: {
       type: String,
+      default: '',
     },
     language: {
       type: String,
+      default: '',
     },
   },
   render(h, ctx) {

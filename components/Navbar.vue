@@ -39,7 +39,7 @@ export default {
               About Me
             </nuxt-link>
           </li>
-          <form ref="searchForm" action="/search">
+          <form ref="searchForm" class="form-inline" action="/search">
             <div class="search-form">
               <div class="search-icon" @click="submitSearch">
                 <fa class="search" :icon="['fas', 'search']"></fa>
