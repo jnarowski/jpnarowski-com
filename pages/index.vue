@@ -77,7 +77,7 @@ export default {
                   type="image/webp"
                 />
                 <source :srcset="require('~/assets/img/avatars/RyanEstes.jpg')" type="image/jpeg" />
-                <img v-lazy="require('~/assets/img/avatars/RyanEstes.jpg')" />
+                <img v-lazy="require('~/assets/img/avatars/RyanEstes.jpg')" alt="Podcast image" />
               </base-picture>
             </template>
           </podcast-card>
@@ -94,7 +94,7 @@ export default {
                   type="image/webp"
                 />
                 <source :srcset="require('~/assets/img/avatars/NathanLatka.jpg')" type="image/jpeg" />
-                <img v-lazy="require('~/assets/img/avatars/NathanLatka.jpg')" />
+                <img v-lazy="require('~/assets/img/avatars/NathanLatka.jpg')" alt="Podcast image" />
               </base-picture>
             </template>
           </podcast-card>
@@ -114,7 +114,10 @@ export default {
                   :srcset="require('~/assets/img/avatars/ChristopherSalem.jpg')"
                   type="image/jpeg"
                 />
-                <img v-lazy="require('~/assets/img/avatars/ChristopherSalem.jpg')" />
+                <img
+                  v-lazy="require('~/assets/img/avatars/ChristopherSalem.jpg')"
+                  alt="Podcast image"
+                />
               </base-picture>
             </template>
           </podcast-card>
@@ -131,7 +134,7 @@ export default {
                   type="image/webp"
                 />
                 <source :srcset="require('~/assets/img/avatars/AdamToporek.jpg')" type="image/jpeg" />
-                <img v-lazy="require('~/assets/img/avatars/AdamToporek.jpg')" />
+                <img v-lazy="require('~/assets/img/avatars/AdamToporek.jpg')" alt="Podcast image" />
               </base-picture>
               <base-picture class="img-fluid podcast-item--avatar">
                 <source
@@ -142,7 +145,10 @@ export default {
                   :srcset="require('~/assets/img/avatars/JeannieWalters.jpg')"
                   type="image/jpeg"
                 />
-                <img v-lazy="require('~/assets/img/avatars/JeannieWalters.jpg')" />
+                <img
+                  v-lazy="require('~/assets/img/avatars/JeannieWalters.jpg')"
+                  alt="Podcast image"
+                />
               </base-picture>
             </template>
           </podcast-card>
