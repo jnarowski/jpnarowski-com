@@ -78,17 +78,13 @@ export default {
     </nuxt-link>
     <div class="card-block">
       <h2 class="card-title">
-        <nuxt-link :aria-label="ariaLabel" :to="'/' + slug">
-          {{ title }}
-        </nuxt-link>
+        <nuxt-link :aria-label="ariaLabel" :to="'/' + slug">{{ title }}</nuxt-link>
       </h2>
-      <h4 v-if="subtitle" class="card-text">
-        {{ subtitle | truncate(75) }}
-      </h4>
+      <h4 v-if="subtitle" class="card-text">{{ subtitle | truncate(75) }}</h4>
       <div class="metafooter">
         <div class="wrapfooter">
           <span class="meta-footer-thumb">
-            <avatar-image class="author-thumb"></avatar-image>
+            <avatar-image alt class="author-thumb"></avatar-image>
           </span>
           <span class="author-meta">
             <span class="post-name">
