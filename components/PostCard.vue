@@ -70,7 +70,7 @@ export default {
       <picture v-if="featuredImage.url" class="img-fluid">
         <source :srcset="thumbnailUrl + '?webp'" type="image/webp" />
         <source :srcset="thumbnailUrl" type="image/jpeg" />
-        <img :src="thumbnailUrl" />
+        <img v-lazy="thumbnailUrl" />
       </picture>
     </nuxt-link>
     <div class="card-block">
