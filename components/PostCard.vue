@@ -73,7 +73,7 @@ export default {
         </div>
       </div>
       <div class="post-image--container">
-        <img alt v-lazy="thumbnailUrl" />
+        <img v-lazy="thumbnailUrl" alt="-" />
       </div>
     </nuxt-link>
     <div class="card-block">
