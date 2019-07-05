@@ -1,8 +1,9 @@
 <script>
-import Highlight from 'vue-highlight-component'
+import CodeHighlight from '@/components/CodeHighlight'
+
 export default {
   components: {
-    Highlight,
+    CodeHighlight,
   },
   props: {
     slice: {
@@ -20,7 +21,7 @@ export default {
 
 <template>
   <div class="post-part single code-highlight">
-    <highlight :language="language" :code="$prismic.asText(slice.primary.code)" />
+    <code-highlight :language="language" :code="$prismic.asText(slice.primary.code)" />
   </div>
 </template>
 
