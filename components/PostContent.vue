@@ -1,4 +1,6 @@
 <script>
+import { asHtml } from '@/modules/headlessCms'
+
 const CodeSlice = () => import('@/components/slices/CodeSlice')
 const QuoteSlice = () => import('@/components/slices/QuoteSlice')
 const TextSlice = () => import('@/components/slices/TextSlice')
@@ -21,12 +23,15 @@ export default {
       default: () => [],
     },
   },
+  methods: {
+    asHtml,
+  },
 }
 </script>
 
 <template>
   <div>
-    <div v-html="$prismic.asHtml(body)"></div>
+    <div v-html="asHtml(body)"></div>
     <section v-for="(slice, index) in slices" :key="'slice-' + index">
       <template v-if="slice.slice_type === 'paragraph'">
         <text-slice :slice="slice"></text-slice>

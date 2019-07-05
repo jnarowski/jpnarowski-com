@@ -26,7 +26,7 @@ const buildPostList = (resp) => {
   }
 }
 
-export const getText = (content) => {
+export const asText = (content) => {
   if (!content) {
     return ''
   }
@@ -34,7 +34,7 @@ export const getText = (content) => {
   return PrismicDom.RichText.asText(content)
 }
 
-export const getHtml = (content) => {
+export const asHtml = (content) => {
   return PrismicDom.RichText.asHtml(content)
 }
 
@@ -57,9 +57,9 @@ const dataToPost = (post) => {
     tags: post.tags,
     readTime,
     featuredImage: post.data.featured_image,
-    title: getText(post.data.title),
-    subtitle: getText(post.data.subtitle),
-    metaDescription: PrismicDom.RichText.asText(post.data.meta_description || post.data.subtitle),
+    title: asText(post.data.title),
+    subtitle: asText(post.data.subtitle),
+    metaDescription: asText(post.data.meta_description || post.data.subtitle),
     published: post.data.published || post.first_publication_date,
     slices: post.data.body1,
     body

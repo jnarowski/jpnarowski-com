@@ -1,30 +1,6 @@
-<template>
-  <div>
-    <template v-if="size === 'image-full-width'">
-      <div class="blog-header single" :style="{ 'background-image': 'url(' + img.url + ')'}">
-        <template v-if="$prismic.richTextAsPlain(caption) != ''">
-          <div class="wrapper">
-            <h1>{{ $prismic.richTextAsPlain(caption) }}</h1>
-          </div>
-        </template>
-      </div>
-    </template>
-    <template v-else>
-      <div class="post-part single container">
-        <p class="block-img" :class="size">
-          <prismic-image :field="img" />
-        </p>
-        <template v-if="$prismic.richTextAsPlain(caption) != ''">
-          <p>
-            <span class="image-label">{{ $prismic.richTextAsPlain(caption) }}</span>
-          </p>
-        </template>
-      </div>
-    </template>
-  </div>
-</template>
-
 <script>
+import { asText } from '@/modules/headlessCms'
+
 export default {
   props: {
     slice: {
@@ -37,6 +13,9 @@ export default {
     caption: '',
     size: '',
   }),
+  methods: {
+    asText,
+  },
   created() {
     this.img = this.slice.primary.image
     this.caption = this.slice.primary.caption
@@ -44,6 +23,32 @@ export default {
   },
 }
 </script>
+
+<template>
+  <div>
+    <template v-if="size === 'image-full-width'">
+      <div class="blog-header single" :style="{ 'background-image': 'url(' + img.url + ')'}">
+        <template v-if="asText(caption) != ''">
+          <div class="wrapper">
+            <h1>{{ asText(caption) }}</h1>
+          </div>
+        </template>
+      </div>
+    </template>
+    <template v-else>
+      <div class="post-part single container">
+        <p class="block-img" :class="size">
+          <prismic-image :field="img" />
+        </p>
+        <template v-if="asText(caption) != ''">
+          <p>
+            <span class="image-label">{{ asText(caption) }}</span>
+          </p>
+        </template>
+      </div>
+    </template>
+  </div>
+</template>
 
 <style lang="sass" scoped>
 .blog-header

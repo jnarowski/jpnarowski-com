@@ -1,4 +1,5 @@
 <script>
+import { asText } from '@/modules/headlessCms'
 const CodeHighlight = () => import('@/components/CodeHighlight')
 
 export default {
@@ -16,12 +17,15 @@ export default {
       return (this.slice.primary.code_language || '').toLowerCase()
     },
   },
+  methods: {
+    asText,
+  },
 }
 </script>
 
 <template>
   <div class="post-part single code-highlight">
-    <code-highlight :language="language" :code="$prismic.asText(slice.primary.code)" />
+    <code-highlight :language="language" :code="asText(slice.primary.code)" />
   </div>
 </template>
 

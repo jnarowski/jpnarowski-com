@@ -30,7 +30,6 @@
     "imagemin-mozjpeg": "^8.0.0",
     "jimp": "^0.6.4",
     "nuxt": "^2.0.0",
-    "nuxt-compress": "^1.0.2",
     "prismic-dom": "^2.1.0",
     "prismic-javascript": "^2.0.3",
     "responsive-loader": "^1.2.0",
@@ -56,7 +55,7 @@
     "jest": "^24.1.0",
     "node-sass": "^4.12.0",
     "nodemon": "^1.18.9",
-    "prismic-nuxt": "^0.5.1",
+    "nuxt-compress": "^1.0.2",
     "sass-loader": "^7.1.0",
     "vue-jest": "^3.0.3"
   }

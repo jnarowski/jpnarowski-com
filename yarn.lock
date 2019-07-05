@@ -9296,14 +9296,6 @@ prismic-helpers@^1.0.0:
   resolved "https://registry.yarnpkg.com/prismic-helpers/-/prismic-helpers-1.0.0.tgz#8337420cf187f55fb7b7a8be755523c8696fc329"
   integrity sha1-gzdCDPGH9V+3t6i+dVUjyGlvwyk=
 
-prismic-javascript@^1.5.0:
-  version "1.5.1"
-  resolved "https://registry.yarnpkg.com/prismic-javascript/-/prismic-javascript-1.5.1.tgz#0f9da4e58a094ca0fb0b68e2e458e1a6c33a52ce"
-  integrity sha512-JAqbrjzE5nOXs0wy7GySMkiV91jk8j0jQS8c+OC2zsoi1UzG4CriETgXVEXGdmVPC1Iu7PVucWmVn5iGiFcF5A==
-  dependencies:
-    cross-fetch "^2.2.0"
-    promise-polyfill "8.0.0"
-
 prismic-javascript@^2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/prismic-javascript/-/prismic-javascript-2.0.3.tgz#085da0c332e1903bd79a59b3afbb2b5d5c6fabbd"
@@ -9311,14 +9303,6 @@ prismic-javascript@^2.0.3:
   dependencies:
     cross-fetch "^2.2.0"
     promise-polyfill "8.0.0"
-
-prismic-nuxt@^0.5.1:
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/prismic-nuxt/-/prismic-nuxt-0.5.1.tgz#ff064ca62627c296c9bfcb6953d00c99dea759a9"
-  integrity sha512-LeyoWcEpu40ldPBcCbO4ZtONgdOKT2SRq36uFE7zXUdHK2F3TmcfbsedSbjBAjArwdNeOxbB/zq2bcUzZ5j20g==
-  dependencies:
-    prismic-dom "^2.1.0"
-    prismic-javascript "^1.5.0"
 
 prismic-richtext@^0.4.2:
   version "0.4.2"

@@ -36,7 +36,7 @@ export default {
    */
   loading: {
     color: '#03a87c',
-    height: '5px'
+    height: '2px'
   },
   /*
    ** Global CSS
@@ -70,12 +70,6 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/eslint-module',
-    ['prismic-nuxt', {
-      endpoint: 'https://jpnarowski-com.cdn.prismic.io/api/v2',
-      linkResolver: function (doc, ctx) {
-        return '/'
-      }
-    }],
     ['@nuxtjs/google-analytics', {
       id: 'UA-7419920-14'
     }]
@@ -98,7 +92,7 @@ export default {
      */
     analyze: true,
     extend(config, ctx) {
-      config.resolve.alias.vue = 'vue/dist/vue.common'
+      // config.resolve.alias.vue = 'vue/dist/vue.common'
     }
   }
 }
