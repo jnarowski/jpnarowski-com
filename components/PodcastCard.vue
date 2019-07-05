@@ -1,5 +1,10 @@
 <script>
+const BasePicture = () => import('@/components/BasePicture')
+
 export default {
+  components: {
+    BasePicture,
+  },
   props: {
     date: {
       type: String,
@@ -17,6 +22,10 @@ export default {
       type: String,
       default: '',
     },
+    images: {
+      type: Array,
+      default: () => [],
+    },
   },
 }
 </script>
@@ -30,6 +39,14 @@ export default {
         </div>
       </b-col>
       <b-col cols="11" style="padding: 10px;">
+        <div v-if="images.length" class="float-right d-none d-sm-block">
+          <base-picture
+            v-for="image in images"
+            :key="image"
+            :image="image"
+            class="img-fluid podcast-item--avatar"
+          />
+        </div>
         <div v-if="$slots.avatar" class="float-right d-none d-sm-block">
           <slot name="avatar"></slot>
         </div>

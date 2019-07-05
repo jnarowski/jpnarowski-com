@@ -1,14 +1,11 @@
 <script>
 import { getPosts } from './../modules/headlessCms'
-import backgroundImage from '~/assets/img/demopic/1.jpg'
 
 const PostCard = () => import('@/components/PostCard')
 const PodcastCard = () => import('@/components/PodcastCard')
-const BasePicture = () => import('@/components/BasePicture')
 
 export default {
   components: {
-    BasePicture,
     PostCard,
     PodcastCard,
   },
@@ -25,9 +22,6 @@ export default {
       ],
     }
   },
-  data: () => ({
-    backgroundImage,
-  }),
   computed: {
     results() {
       return this.collection.results || []
@@ -78,113 +72,31 @@ export default {
             subtitle="TalkLaunch w/ Ryan Estes"
             date="May 16th, 2019"
             link="https://www.talklaunch.net/8658/clickflow/"
-          >
-            <template v-slot:avatar>
-              <base-picture class="img-fluid podcast-item--avatar">
-                <source
-                  :srcset="require('~/assets/img/avatars/RyanEstes.jpg' + '?webp')"
-                  type="image/webp"
-                />
-                <source :srcset="require('~/assets/img/avatars/RyanEstes.jpg')" type="image/jpeg" />
-                <img v-lazy="require('~/assets/img/avatars/RyanEstes.jpg')" alt="Podcast image" />
-              </base-picture>
-            </template>
-          </podcast-card>
+            :images="['img/avatars/RyanEstes.jpg']"
+          />
           <podcast-card
             title="CRM for Speakers Passes $30k in MRR"
             subtitle="Mixergy w/ Nathan Latka"
             date="Jan 23rd, 2019"
             link="https://getlatka.com/companies/karmacrm"
-          >
-            <template v-slot:avatar>
-              <base-picture class="img-fluid podcast-item--avatar">
-                <source
-                  :srcset="require('~/assets/img/avatars/NathanLatka.jpg' + '?webp')"
-                  type="image/webp"
-                />
-                <source :srcset="require('~/assets/img/avatars/NathanLatka.jpg')" type="image/jpeg" />
-                <img v-lazy="require('~/assets/img/avatars/NathanLatka.jpg')" alt="Podcast image" />
-              </base-picture>
-            </template>
-          </podcast-card>
+            :images="['img/avatars/NathanLatka.jpg']"
+          />
           <podcast-card
             title="How to Achieve Work Life Harmony"
             subtitle="Sustainable Success w/ Chris Salem"
             date="May 3rd, 2018"
             link="https://www.voiceamerica.com/episode/106815/how-to-achieve-work-life-harmony"
-          >
-            <template v-slot:avatar>
-              <base-picture class="img-fluid podcast-item--avatar">
-                <source
-                  :srcset="require('~/assets/img/avatars/ChristopherSalem.jpg' + '?webp')"
-                  type="image/webp"
-                />
-                <source
-                  :srcset="require('~/assets/img/avatars/ChristopherSalem.jpg')"
-                  type="image/jpeg"
-                />
-                <img
-                  v-lazy="require('~/assets/img/avatars/ChristopherSalem.jpg')"
-                  alt="Podcast image"
-                />
-              </base-picture>
-            </template>
-          </podcast-card>
+            :images="['img/avatars/ChristopherSalem.jpg']"
+          />
           <podcast-card
             title="270: John-Paul Narowski, KarmaCRM"
             subtitle="Crack the Customer Code"
             date="August 29th, 2017"
             link="https://www.stitcher.com/podcast/crack-the-customer-code/e/51279896"
-          >
-            <template v-slot:avatar>
-              <base-picture class="img-fluid podcast-item--avatar">
-                <source
-                  :srcset="require('~/assets/img/avatars/AdamToporek.jpg' + '?webp')"
-                  type="image/webp"
-                />
-                <source :srcset="require('~/assets/img/avatars/AdamToporek.jpg')" type="image/jpeg" />
-                <img v-lazy="require('~/assets/img/avatars/AdamToporek.jpg')" alt="Podcast image" />
-              </base-picture>
-              <base-picture class="img-fluid podcast-item--avatar">
-                <source
-                  :srcset="require('~/assets/img/avatars/JeannieWalters.jpg' + '?webp')"
-                  type="image/webp"
-                />
-                <source
-                  :srcset="require('~/assets/img/avatars/JeannieWalters.jpg')"
-                  type="image/jpeg"
-                />
-                <img
-                  v-lazy="require('~/assets/img/avatars/JeannieWalters.jpg')"
-                  alt="Podcast image"
-                />
-              </base-picture>
-            </template>
-          </podcast-card>
+            :images="['img/avatars/AdamToporek.jpg', 'img/avatars/JeannieWalters.jpg']"
+          />
         </div>
       </section>
     </div>
   </div>
 </template>
-
-<style>
-.podcast-item--left {
-  background: whiteSmoke;
-  border-right: 1px solid rgba(0, 0, 0, 0.125);
-  padding: 10px;
-}
-.podcast-item--right {
-  padding: 10px;
-}
-.podcast-item--icon {
-  background: whiteSmoke;
-  border-right: 1px solid rgba(0, 0, 0, 0.125);
-  padding: 10px;
-}
-.podcast-item--title {
-  font-size: 1.2em;
-}
-.podcast-item--date {
-  color: rgba(0, 0, 0, 0.44);
-}
-</style>

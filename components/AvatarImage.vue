@@ -15,9 +15,5 @@ export default {
 </script>
 
 <template>
-  <base-picture>
-    <source :srcset="require('~/assets/img/avatars/JP.png?webp')" type="image/webp" />
-    <source :srcset="require('~/assets/img/avatars/JP.png')" type="image/jpeg" />
-    <img v-lazy="require('~/assets/img/avatars/JP.png')" alt="John Paul Narowski | Author Image" />
-  </base-picture>
+  <base-picture image="img/avatars/JP.png"></base-picture>
 </template>

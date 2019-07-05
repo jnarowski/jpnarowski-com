@@ -1,14 +1,13 @@
 <script>
 export default {
   props: {
-    url: {
+    image: {
       type: String,
       default: '',
     },
-  },
-  computed: {
-    imageSrc() {
-      return 'img/avatars/NathanLatka.jpg'
+    alt: {
+      type: String,
+      default: 'Image',
     },
   },
 }
@@ -16,6 +15,10 @@ export default {
 
 <template>
   <picture>
-    <slot />
+    <template v-if="image">
+      <source :srcset="require(`~/assets/${image}?webp`)" type="image/webp" />
+      <source :srcset="require(`~/assets/${image}`)" type="image/jpeg" />
+      <img v-lazy="require(`~/assets/${image}`)" :alt="alt" />
+    </template>
   </picture>
 </template>
