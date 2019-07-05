@@ -11,7 +11,7 @@ export default {
 <template>
   <b-navbar toggleable="lg" type="light" sticky class="navbar--light">
     <div class="container">
-      <nuxt-link class="navbar-brand" to="/">
+      <nuxt-link aria-label="Site home link" class="navbar-brand" to="/">
         JP's Musings
       </nuxt-link>
 
@@ -21,17 +21,21 @@ export default {
         <!-- Right aligned nav items -->
         <b-navbar-nav class="ml-auto">
           <li class="nav-item">
-            <nuxt-link to="/books" class="nav-link">
+            <nuxt-link aria-label="Read more about my books" to="/books" class="nav-link">
               Books
             </nuxt-link>
           </li>
           <li v-if="false" class="nav-item">
-            <nuxt-link to="/curiosities" class="nav-link">
+            <nuxt-link
+              aria-label="Read about my curiosities"
+              to="/curiosities"
+              class="nav-link"
+            >
               Curiosities
             </nuxt-link>
           </li>
           <li class="nav-item">
-            <nuxt-link to="/about-me" class="nav-link">
+            <nuxt-link to="/about-me" aria-label="About me" class="nav-link">
               About Me
             </nuxt-link>
           </li>

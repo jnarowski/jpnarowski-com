@@ -49,13 +49,16 @@ export default {
       }
       return this.featuredImage.url
     },
+    ariaLabel() {
+      return 'Read more about ' + this.title
+    }
   },
 }
 </script>
 
 <template>
   <div class="card">
-    <nuxt-link :to="'/' + slug">
+    <nuxt-link :aria-label="ariaLabel" :to="'/' + slug">
       <div v-if="!featuredImage.url">
         <div
           class="text-center"
@@ -68,7 +71,7 @@ export default {
     </nuxt-link>
     <div class="card-block">
       <h2 class="card-title">
-        <nuxt-link :to="'/' + slug">
+        <nuxt-link :aria-label="ariaLabel" :to="'/' + slug">
           {{ title }}
         </nuxt-link>
       </h2>
@@ -78,13 +81,11 @@ export default {
       <div class="metafooter">
         <div class="wrapfooter">
           <span class="meta-footer-thumb">
-            <a>
-              <img
-                class="author-thumb"
-                src="//0.gravatar.com/avatar/803a0ad71889f0e001ee5b90e71ed48c?s=80"
-                alt="JP"
-              />
-            </a>
+            <img
+              class="author-thumb"
+              src="//0.gravatar.com/avatar/803a0ad71889f0e001ee5b90e71ed48c?s=80"
+              alt="JP"
+            />
           </span>
           <span class="author-meta">
             <span class="post-name">
