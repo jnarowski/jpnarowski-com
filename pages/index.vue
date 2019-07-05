@@ -41,7 +41,9 @@ export default {
       <div class="mainheading">
         <p
           class="lead"
-        >My thoughts on business, travel, and all the other tidbits life has to offer.</p>
+        >
+          My thoughts on business, travel, and all the other tidbits life has to offer.
+        </p>
       </div>
       <section class="featured-posts">
         <div class="section-title">
@@ -53,7 +55,9 @@ export default {
           <post-card v-for="post in results" :key="post.uid" v-bind="post"></post-card>
         </div>
         <div class="text-center">
-          <nuxt-link class="btn btn-secondary mb-3" to="/posts">See all posts</nuxt-link>
+          <nuxt-link class="btn btn-secondary mb-3" to="/posts">
+            See all posts
+          </nuxt-link>
         </div>
       </section>
       <section class="featured-posts">
