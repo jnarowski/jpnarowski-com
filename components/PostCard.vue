@@ -40,6 +40,14 @@ export default {
       type: Object,
       default: () => ({}),
     },
+    lazy: {
+      type: Boolean,
+      default: true,
+    },
+    index: {
+      type: Number,
+      default: null,
+    },
   },
   computed: {
     thumbnailUrl() {
@@ -62,7 +70,7 @@ export default {
 </script>
 
 <template>
-  <div class="card">
+  <div class="card" style="margin-bottom: 20px;">
     <nuxt-link :aria-label="ariaLabel" :to="'/' + slug">
       <div v-if="!featuredImage.url">
         <div
@@ -73,14 +81,19 @@ export default {
         </div>
       </div>
       <div class="post-image--container">
-        <img :src="thumbnailUrl" :alt="'Read the '+title+' post'" class="post-image" />
+        <img v-if="!lazy" :src="thumbnailUrl" :alt="'Read the '+title+' post'" class="post-image" />
+        <img v-if="lazy" v-lazy="thumbnailUrl" :alt="'Read the '+title+' post'" class="post-image" />
       </div>
     </nuxt-link>
     <div class="card-block">
       <h2 class="card-title">
-        <nuxt-link :aria-label="ariaLabel" :to="'/' + slug">{{ title }}</nuxt-link>
+        <nuxt-link :aria-label="ariaLabel" :to="'/' + slug">
+          {{ title }}
+        </nuxt-link>
       </h2>
-      <h4 v-if="subtitle" class="card-text">{{ subtitle | truncate(75) }}</h4>
+      <h4 v-if="subtitle" class="card-text">
+        {{ subtitle | truncate(75) }}
+      </h4>
       <div class="metafooter">
         <div class="wrapfooter">
           <span class="meta-footer-thumb">
@@ -92,7 +105,7 @@ export default {
             </span>
             <br />
             <span class="post-date">{{ published | formatDate }}</span>
-            <span class="dot"></span>
+            <span class="dot">{{ index }}</span>
             <span class="post-read">{{ readTime }} min read</span>
           </span>
         </div>
@@ -107,11 +120,9 @@ export default {
   height: 237px;
   background: whiteSmoke;
 }
-
-/* .post-image:not([src]) {
-  font-size: 0;
-  position: relative;
-} */
+.post-image--container img {
+  width: 100%;
+}
 
 .post-image:before {
   content: ' ';

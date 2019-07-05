@@ -51,8 +51,14 @@ export default {
             <span>Recent Posts</span>
           </h2>
         </div>
-        <div class="card-columns listrecent">
-          <post-card v-for="post in results" :key="post.uid" v-bind="post"></post-card>
+        <div class="card-columnss listrecent">
+          <b-row>
+            <b-col v-for="(post, index) in results" :key="post.uid" lg="4" sm="12">
+              <post-card :lazy="index > 2" :index="index" v-bind="post">
+                {{ index }}
+              </post-card>
+            </b-col>
+          </b-row>
         </div>
         <div class="text-center">
           <nuxt-link class="btn btn-secondary mb-3" to="/posts">
