@@ -74,6 +74,10 @@ export default {
       id: 'UA-7419920-14'
     }]
   ],
+  // Doc: https://www.bazzite.com/docs/nuxt-optimized-images/usage/#query-params
+  optimizedImages: {
+    optimizeImages: true
+  },
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
