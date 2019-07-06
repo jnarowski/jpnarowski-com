@@ -54,9 +54,7 @@ export default {
         <div class="card-columnss listrecent">
           <b-row>
             <b-col v-for="(post, index) in results" :key="post.uid" lg="4" sm="12">
-              <post-card :lazy="index > 2" :index="index" v-bind="post">
-                {{ index }}
-              </post-card>
+              <post-card :lazy="index > 2" :index="index" v-bind="post" />
             </b-col>
           </b-row>
         </div>

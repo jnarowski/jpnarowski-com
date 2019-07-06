@@ -47,7 +47,12 @@ const getReadTime = (body) => {
 }
 
 const dataToPost = (post) => {
-  const body = post.data.simple_body.length ? post.data.simple_body : post.data.body
+  let body = post.data.simple_body.length ? post.data.simple_body : post.data.body
+
+  if (post.data.body1.length) {
+    body = post.data.body1
+  }
+
   const readTime = getReadTime(body)
 
   return {

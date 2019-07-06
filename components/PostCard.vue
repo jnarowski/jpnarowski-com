@@ -44,10 +44,6 @@ export default {
       type: Boolean,
       default: true,
     },
-    index: {
-      type: Number,
-      default: null,
-    },
   },
   computed: {
     thumbnailUrl() {
@@ -105,7 +101,7 @@ export default {
             </span>
             <br />
             <span class="post-date">{{ published | formatDate }}</span>
-            <span class="dot">{{ index }}</span>
+            <span class="dot"></span>
             <span class="post-read">{{ readTime }} min read</span>
           </span>
         </div>
@@ -122,13 +118,15 @@ export default {
 }
 .post-image--container img {
   width: 100%;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
 }
 
 .post-image:before {
   content: ' ';
   display: block;
   position: absolute;
-  top: -10px;
+  top: 0px;
   left: 0;
   height: calc(100% + 10px);
   width: 100%;
@@ -143,7 +141,7 @@ export default {
   font-style: normal;
   color: rgb(100, 100, 100);
   position: absolute;
-  top: 5px;
+  top: 10px;
   left: 0;
   width: 100%;
   text-align: center;
