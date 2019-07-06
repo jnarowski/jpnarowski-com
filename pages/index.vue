@@ -41,9 +41,7 @@ export default {
       <div class="mainheading">
         <p
           class="lead"
-        >
-          My thoughts on business, travel, and all the other tidbits life has to offer.
-        </p>
+        >My thoughts on business, travel, and all the other tidbits life has to offer.</p>
       </div>
       <section class="featured-posts">
         <div class="section-title">
@@ -54,14 +52,12 @@ export default {
         <div class="card-columnss listrecent">
           <b-row>
             <b-col v-for="(post, index) in results" :key="post.uid" lg="4" sm="12">
-              <post-card :lazy="index > 2" :index="index" v-bind="post" />
+              <post-card :lazy="true" :index="index" v-bind="post" />
             </b-col>
           </b-row>
         </div>
         <div class="text-center">
-          <nuxt-link class="btn btn-secondary mb-3" to="/posts">
-            See all posts
-          </nuxt-link>
+          <nuxt-link class="btn btn-secondary mb-3" to="/posts">See all posts</nuxt-link>
         </div>
       </section>
       <section class="featured-posts">

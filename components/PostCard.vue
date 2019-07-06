@@ -83,13 +83,9 @@ export default {
     </nuxt-link>
     <div class="card-block">
       <h2 class="card-title">
-        <nuxt-link :aria-label="ariaLabel" :to="'/' + slug">
-          {{ title }}
-        </nuxt-link>
+        <nuxt-link :aria-label="ariaLabel" :to="'/' + slug">{{ title }}</nuxt-link>
       </h2>
-      <h4 v-if="subtitle" class="card-text">
-        {{ subtitle | truncate(75) }}
-      </h4>
+      <h4 v-if="subtitle" class="card-text">{{ subtitle | truncate(75) }}</h4>
       <div class="metafooter">
         <div class="wrapfooter">
           <span class="meta-footer-thumb">
@@ -114,7 +110,6 @@ export default {
 .post-image--container {
   width: 100%;
   height: 237px;
-  background: whiteSmoke;
 }
 .post-image--container img {
   width: 100%;
@@ -128,20 +123,21 @@ export default {
   position: absolute;
   top: 0px;
   left: 0;
-  height: calc(100% + 10px);
+  /* height: calc(100% + 10px); */
+  height: 237px;
   width: 100%;
   background-color: rgb(230, 230, 230);
   border-radius: 5px;
 }
 
 .post-image:after {
-  content: 'Loading...';
+  content: 'LOADING...';
   display: block;
   font-size: 16px;
   font-style: normal;
   color: rgb(100, 100, 100);
   position: absolute;
-  top: 10px;
+  top: 100px;
   left: 0;
   width: 100%;
   text-align: center;
