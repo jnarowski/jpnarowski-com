@@ -77,8 +77,8 @@ export default {
         </div>
       </div>
       <div class="post-image--container">
-        <img v-if="!lazy" :src="thumbnailUrl" :alt="'Read the '+title+' post'" class="post-image" />
-        <img v-if="lazy" v-lazy="thumbnailUrl" :alt="'Read the '+title+' post'" class="post-image" />
+        <img v-if="!lazy" :src="thumbnailUrl" class="post-image" />
+        <img v-if="lazy" v-lazy="thumbnailUrl" class="post-image" />
       </div>
     </nuxt-link>
     <div class="card-block">
@@ -109,7 +109,7 @@ export default {
 <style>
 .post-image--container {
   width: 100%;
-  height: 237px;
+  /* height: 237px; */
 }
 .post-image--container img {
   width: 100%;
@@ -117,14 +117,13 @@ export default {
   border-top-right-radius: 0.25rem;
 }
 
-.post-image:before {
+/* .post-image:before {
   content: ' ';
   display: block;
   position: absolute;
   top: 0px;
   left: 0;
-  /* height: calc(100% + 10px); */
-  height: 237px;
+  height: calc(100% + 10px);
   width: 100%;
   background-color: rgb(230, 230, 230);
   border-radius: 5px;
@@ -141,5 +140,5 @@ export default {
   left: 0;
   width: 100%;
   text-align: center;
-}
+} */
 </style>

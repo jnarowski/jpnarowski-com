@@ -31,7 +31,7 @@ export default {
 
 <template>
   <div>
-    <div v-html="asHtml(body)"></div>
+    <div v-if="body && body.length" v-html="asHtml(body)"></div>
     <section v-for="(slice, index) in slices" :key="'slice-' + index">
       <template v-if="slice.slice_type === 'paragraph'">
         <text-slice :slice="slice"></text-slice>

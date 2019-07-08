@@ -38,8 +38,9 @@ export const asHtml = (content) => {
   return PrismicDom.RichText.asHtml(content)
 }
 
-const getReadTime = (body) => {
-  const text = PrismicDom.RichText.asText(body)
+const getReadTime = (body, slices) => {
+  const str = body.length ? body : slices
+  const text = PrismicDom.RichText.asText(str)
   const totalWords = text.trim().split(/\s+/).length
   const timeToRead = totalWords / 200
 
@@ -47,13 +48,8 @@ const getReadTime = (body) => {
 }
 
 const dataToPost = (post) => {
-  let body = post.data.simple_body.length ? post.data.simple_body : post.data.body
-
-  if (post.data.body1.length) {
-    body = post.data.body1
-  }
-
-  const readTime = getReadTime(body)
+  const body = post.data.simple_body.length ? post.data.simple_body : post.data.body
+  const readTime = getReadTime(body, post.data.body1)
 
   return {
     post,

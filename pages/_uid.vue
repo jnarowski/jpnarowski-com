@@ -45,8 +45,10 @@ export default {
   async asyncData(context) {
     const { params, error, store } = context
 
+    const uid = (params.uid || '').replace(/\/$/, '')
+
     try {
-      let post = store.getters['posts/listFindBySlug'](params.uid)
+      let post = store.getters['posts/listFindBySlug'](uid)
 
       if (!post) {
         post = await getPost(params.uid)
@@ -143,9 +145,7 @@ export default {
           <div class="after-post-tags">
             <ul class="tags">
               <li v-for="tag in tags" :key="tag">
-                <nuxt-link :to="'/posts/tagged/' + tag">
-                  {{ tag }}
-                </nuxt-link>
+                <nuxt-link :to="'/posts/tagged/' + tag">{{ tag }}</nuxt-link>
               </li>
             </ul>
           </div>
