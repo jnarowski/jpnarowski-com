@@ -74,6 +74,19 @@ export const getPost = async function (uid) {
   return dataToPost(post)
 }
 
+export const getCuriosities = async function (options = {}) {
+  const api = await getApi()
+
+  const apiOptions = buildPostQueryOptions(options)
+
+  const resp = await api.query([
+    Prismic.Predicates.at('document.type', 'blog-post'),
+    Prismic.Predicates.at('my.blog-post.post-type', 'Curiosity')
+  ], apiOptions)
+
+  return buildPostList(resp)
+}
+
 export const getPosts = async function (options = {}) {
   const api = await getApi()
 

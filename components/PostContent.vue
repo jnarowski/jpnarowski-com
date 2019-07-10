@@ -5,9 +5,11 @@ const CodeSlice = () => import('@/components/slices/CodeSlice')
 const QuoteSlice = () => import('@/components/slices/QuoteSlice')
 const TextSlice = () => import('@/components/slices/TextSlice')
 const ImageCaptionSlice = () => import('@/components/slices/ImageCaptionSlice')
+const BookListSlice = () => import('@/components/slices/BookListSlice')
 
 export default {
   components: {
+    BookListSlice,
     CodeSlice,
     ImageCaptionSlice,
     QuoteSlice,
@@ -48,11 +50,12 @@ export default {
       <template v-else-if="slice.slice_type === 'image_with_caption'">
         <image-caption-slice :slice="slice"></image-caption-slice>
       </template>
+      <template v-else-if="slice.slice_type === 'list_of_books'">
+        <book-list-slice :slice="slice"></book-list-slice>
+      </template>
+      <template v-else-if="1 == 2">
+        <pre>{{ slice.slice_type }}</pre>
+      </template>
     </section>
   </div>
 </template>
-
-resolve: {
-  root: [path.resolve(__dirname, ‘src’), path.resolve(__dirname, ‘node_modules’)],
-  extensions: [”, ‘.js’, ‘.jsx’, ‘.coffee’]
-},
