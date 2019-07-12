@@ -273,29 +273,11 @@ span.post-read-more a:hover {
   color: rgba(0, 0, 0, .8);
 }
 
-.article-post {
-  font-family: Merriweather;
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: rgba(0, 0, 0, .8);
-}
-
 blockquote {
   border-left: 4px solid #00ab6b;
   padding: 0 20px;
   font-style: italic;
   color: rgba(0, 0, 0, .5);
-}
-
-.article-post h3 {
-  color: #8D8D8D;
-  font-weight: 300;
-  font-size: 1.3em;
-}
-
-.article-post p,
-.article-post blockquote {
-  margin: 0 0 1.5rem 0;
 }
 
 .featured-image {
@@ -638,4 +620,30 @@ ul.tags li a:hover {
 .slide-right-enter {
   opacity: 0;
   transform: translate(-30px, 0);
+}
+
+/* ============================================== */
+/* ARTICLE POST CSS */
+/* ============================================== */
+
+.article-post {
+  font-family: Merriweather;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: rgba(0, 0, 0, .8);
+}
+
+.article-post h2 {
+  color: #0D68A5;
+}
+
+.article-post h3 {
+  color: #8D8D8D;
+  font-weight: 300;
+  font-size: 1.3em;
+}
+
+.article-post p,
+.article-post blockquote {
+  margin: 0 0 1.5rem 0;
 }
