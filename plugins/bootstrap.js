@@ -9,6 +9,7 @@ import bNavbarToggle from 'bootstrap-vue/es/components/navbar/navbar-toggle'
 import bNavbarNav from 'bootstrap-vue/es/components/navbar/navbar-nav'
 import bFormInput from 'bootstrap-vue/es/components/form-input/form-input'
 import bCollapse from 'bootstrap-vue/es/components/collapse/collapse'
+import bProgress from 'bootstrap-vue/es/components/progress/progress'
 
 Vue.component('b-col', bCol)
 Vue.component('b-collapse', bCollapse)
@@ -19,3 +20,4 @@ Vue.directive('b-pagination', bPagination)
 Vue.component('b-navbar', bNavbar)
 Vue.component('b-navbar-toggle', bNavbarToggle)
 Vue.component('b-navbar-nav', bNavbarNav)
+Vue.component('b-progress', bProgress)
