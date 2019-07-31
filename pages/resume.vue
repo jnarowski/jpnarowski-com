@@ -44,7 +44,7 @@ export default {
           <div class="section--right">
             <h3>Employement History</h3>
             <div class="employment--wrapper">
-              <h4 class="mb-0 employment--header">Clickflow</h4>
+              <h5 class="mb-0 employment--header">CTO and Co-founder at Clickflow</h5>
               <div class="employment--date text-muted">July 2016 - Present</div>
               <ul class="employment--bullets">
                 <li>Designed core application architecture (VueJS + Ruby API)</li>
@@ -54,7 +54,7 @@ export default {
               </ul>
             </div>
             <div class="employment--wrapper">
-              <h4 class="mb-0 employment--header">KarmaCRM</h4>
+              <h5 class="mb-0 employment--header">CEO at KarmaCRM</h5>
               <div class="employment--date text-muted">January 2011 - March 2019</div>
               <ul class="employment--bullets">
                 <li>Designed and built entire architecture (BackboneJS + Ruby API)</li>
@@ -65,7 +65,7 @@ export default {
               </ul>
             </div>
             <div class="employment--wrapper">
-              <h4 class="mb-0 employment--header">Amish Tables</h4>
+              <h5 class="mb-0 employment--header">CEO at Amish Tables</h5>
               <div class="employment--date text-muted">May 2003 - February 2017</div>
               <ul class="employment--bullets">
                 <li>Helped grow the company from $60k to $1.5 million in 3 years</li>
@@ -75,7 +75,7 @@ export default {
               </ul>
             </div>
             <div class="employment--wrapper">
-              <h4 class="mb-0 employment--header">MetaSpring</h4>
+              <h5 class="mb-0 employment--header">CTO and Co-founder at MetaSpring</h5>
               <div class="employment--date text-muted">May 2005 - April 2008</div>
               <ul class="employment--bullets">
                 <li>Did technical sales, closing $100k in new revenue monthly</li>
