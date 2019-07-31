@@ -17,70 +17,90 @@ export default {
         <img class="headshot" src="~/assets/img/jp-headshot.jpg" />
       </b-col>
       <b-col>
-        <h3 class="mb-0">John Paul Narowski</h3>
+        <h3 class="mb-0 mt-1">John Paul Narowski</h3>
         <div class="text-muted">CTO & Fullstack Developer</div>
       </b-col>
     </b-row>
-    <b-row class="margin-spacer margin-spacer-bottom">
+    <b-row class="main--section margin-spacer padding-spacer margin-spacer-bottom">
       <b-col cols="9">
         <div class="float-left">
           <fa :icon="['fas', 'fa-book']" />
         </div>
         <div>
-          <h3>Profile</h3>
-          <p>Fundamentally, I’m an entrepreneur. After pooling years of real world experience in marketing, business development and management, my journey led me to karmaCRM, a web-based SAAS CRM company with a product I engineered to fit the needs of small businesses. I chose the name “Karma” because I’m a big believer in good things coming around to those who dispense good vibes out into the world.</p>
+          <div class="float-left">
+            <fa class="section--icon" :icon="['fas', 'user']"></fa>
+          </div>
+          <div class="section--right">
+            <h3>Profile</h3>
+            <p>Fundamentally, I’m an entrepreneur. After pooling years of real world experience in marketing, business development and management, my journey led me to karmaCRM, a web-based SAAS CRM company with a product I engineered to fit the needs of small businesses. I chose the name “Karma” because I’m a big believer in good things coming around to those who dispense good vibes out into the world.</p>
+          </div>
         </div>
         <div class="margin-spacer">
-          <h3>Employement History</h3>
-          <div class="employment--wrapper">
-            <h4 class="mb-0 employment--header">Clickflow</h4>
-            <div class="employment--date text-muted">July 2016 - Present</div>
-            <ul class="employment--bullets">
-              <li>Designed core application architecture (VueJS + Ruby API)</li>
-              <li>Implemented performant serverless javascript library to execute test rules</li>
-              <li>Launched data-science backed microservices to enhance the data model</li>
-              <li>Helped conduct customer development interviews to achieve product/market fit</li>
-            </ul>
+          <div class="float-left">
+            <fa class="section--icon" :icon="['fas', 'briefcase']"></fa>
           </div>
-          <div class="employment--wrapper">
-            <h4 class="mb-0 employment--header">KarmaCRM</h4>
-            <div class="employment--date text-muted">January 2011 - March 2019</div>
-            <ul class="employment--bullets">
-              <li>Designed and built entire architecture (BackboneJS + Ruby API)</li>
-              <li>Lead the company to grow to over $25k MRR</li>
-              <li>Managed offshore dev teams</li>
-              <li>Hired and mentored JR developers</li>
-              <li>Oversaw growth to over 6,000 users</li>
-            </ul>
-          </div>
-          <div class="employment--wrapper">
-            <h4 class="mb-0 employment--header">Amish Tables</h4>
-            <div class="employment--date text-muted">May 2003 - February 2017</div>
-            <ul class="employment--bullets">
-              <li>Helped grow the company from $60k to $1.5 million in 3 years</li>
-              <li>Built custom e-commerce platform specially designed for the custom complexity of the furntiure</li>
-              <li>Created custom backend reports and workflows to streamline processes</li>
-              <li>Migrated site to Shopify and built custom workflow apps on Shopify</li>
-            </ul>
-          </div>
-          <div class="employment--wrapper">
-            <h4 class="mb-0 employment--header">MetaSpring</h4>
-            <div class="employment--date text-muted">May 2005 - April 2008</div>
-            <ul class="employment--bullets">
-              <li>Did technical sales, closing $100k in new revenue monthly</li>
-              <li>Hired and grew our dev team from 0 to 10</li>
-              <li>Handled all core software architecture implemention of each client project</li>
-              <li>Coded and launched over 20 custom web applications</li>
-            </ul>
+          <div class="section--right">
+            <h3>Employement History</h3>
+            <div class="employment--wrapper">
+              <h4 class="mb-0 employment--header">Clickflow</h4>
+              <div class="employment--date text-muted">July 2016 - Present</div>
+              <ul class="employment--bullets">
+                <li>Designed core application architecture (VueJS + Ruby API)</li>
+                <li>Implemented performant serverless javascript library to execute test rules</li>
+                <li>Launched data-science backed microservices to enhance the data model</li>
+                <li>Helped conduct customer development interviews to achieve product/market fit</li>
+              </ul>
+            </div>
+            <div class="employment--wrapper">
+              <h4 class="mb-0 employment--header">KarmaCRM</h4>
+              <div class="employment--date text-muted">January 2011 - March 2019</div>
+              <ul class="employment--bullets">
+                <li>Designed and built entire architecture (BackboneJS + Ruby API)</li>
+                <li>Lead the company to grow to over $25k MRR</li>
+                <li>Managed offshore dev teams</li>
+                <li>Hired and mentored JR developers</li>
+                <li>Oversaw growth to over 6,000 users</li>
+              </ul>
+            </div>
+            <div class="employment--wrapper">
+              <h4 class="mb-0 employment--header">Amish Tables</h4>
+              <div class="employment--date text-muted">May 2003 - February 2017</div>
+              <ul class="employment--bullets">
+                <li>Helped grow the company from $60k to $1.5 million in 3 years</li>
+                <li>Built custom e-commerce platform specially designed for the custom complexity of the furntiure</li>
+                <li>Created custom backend reports and workflows to streamline processes</li>
+                <li>Migrated site to Shopify and built custom workflow apps on Shopify</li>
+              </ul>
+            </div>
+            <div class="employment--wrapper">
+              <h4 class="mb-0 employment--header">MetaSpring</h4>
+              <div class="employment--date text-muted">May 2005 - April 2008</div>
+              <ul class="employment--bullets">
+                <li>Did technical sales, closing $100k in new revenue monthly</li>
+                <li>Hired and grew our dev team from 0 to 10</li>
+                <li>Handled all core software architecture implemention of each client project</li>
+                <li>Coded and launched over 20 custom web applications</li>
+              </ul>
+            </div>
           </div>
         </div>
         <div class="employment--wrapper">
-          <h3>Education</h3>
-          <div>Bachelors Degree - Washtenaw Community College - 2003</div>
+          <div class="float-left">
+            <fa class="section--icon" :icon="['fas', 'graduation-cap']"></fa>
+          </div>
+          <div class="section--right">
+            <h3>Education</h3>
+            <div>Bachelors Degree - Washtenaw Community College - 2003</div>
+          </div>
         </div>
         <div class="employment--wrapper">
-          <h3>References</h3>
-          <div>Available upon request</div>
+          <div class="float-left">
+            <fa class="section--icon" :icon="['fas', 'bullhorn']"></fa>
+          </div>
+          <div class="section--right">
+            <h3>References</h3>
+            <div>Available upon request</div>
+          </div>
         </div>
       </b-col>
       <b-col cols="3">
@@ -208,6 +228,9 @@ export default {
 
 <style lang="scss">
 .container-resume {
+  .main--section {
+    border-top: 1px solid whiteSmoke;
+  }
   .details--label {
     text-transform: uppercase;
     font-size: 0.8em;
@@ -224,6 +247,9 @@ export default {
   }
   .margin-spacer {
     margin-top: 2rem;
+  }
+  .padding-spacer {
+    padding-top: 2rem;
   }
   .margin-spacer-bottom {
     margin-bottom: 2rem;
@@ -248,7 +274,7 @@ export default {
     margin-top: 0.5rem;
   }
   .skill--percent {
-    font-size: 1.5em;
+    font-size: 1.3em;
   }
   .skills--header {
     margin-top: 1rem;
@@ -257,6 +283,13 @@ export default {
     color: #666;
     text-align: right;
     text-transform: uppercase;
+  }
+  .section--icon {
+    font-size: 1.2em;
+    margin-top: 8px;
+  }
+  .section--right {
+    margin-left: 32px;
   }
 }
 </style>
