@@ -1,9 +1,11 @@
 <script>
+// Inspiration
+// https://resume.io/app/auth/sign-up/templates
 export default {
   components: {},
   head() {
     return {
-      title: 'My Resume',
+      title: "John Paul Narowski's Resume",
     }
   },
   created() {},
