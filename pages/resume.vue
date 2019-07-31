@@ -15,19 +15,18 @@ export default {
 <template>
   <div class="container container-resume">
     <b-row class="margin-spacer">
-      <b-col cols="1">
-        <img class="headshot" src="~/assets/img/jp-headshot.jpg" />
-      </b-col>
       <b-col>
-        <h3 class="mb-0 mt-1">John Paul Narowski</h3>
-        <div class="text-muted">CTO & Fullstack Developer</div>
+        <div class="float-left">
+          <img class="headshot" src="~/assets/img/jp-headshot.jpg" />
+        </div>
+        <div style="margin-left: 90px;">
+          <h3 class="mb-0 mt-1">John Paul Narowski</h3>
+          <div class="text-muted">CTO & Fullstack Developer</div>
+        </div>
       </b-col>
     </b-row>
     <b-row class="main--section margin-spacer padding-spacer margin-spacer-bottom">
-      <b-col cols="9">
-        <div class="float-left">
-          <fa :icon="['fas', 'fa-book']" />
-        </div>
+      <b-col sm="12" md="9" lg="9">
         <div>
           <div class="float-left">
             <fa class="section--icon" :icon="['fas', 'user']"></fa>
@@ -105,8 +104,9 @@ export default {
           </div>
         </div>
       </b-col>
-      <b-col cols="3">
+      <b-col lg="3" md="3" sm="auto">
         <div class="details--wrapper">
+          <div class="d-block d-md-none margin-spacer padding-spacer top-gray-border"></div>
           <h4>Details</h4>
           <div>87 W. Cedar Ave</div>
           <div>Denver CO, 80223</div>
@@ -292,6 +292,9 @@ export default {
   }
   .section--right {
     margin-left: 32px;
+  }
+  .top-gray-border {
+    border-top: 1px solid whiteSmoke;
   }
 }
 </style>
