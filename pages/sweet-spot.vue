@@ -23,38 +23,54 @@ export default {
     <resume-header />
     <b-row class="main--section margin-spacer padding-spacer margin-spacer-bottom">
       <b-col sm="12" md="9" lg="9">
-        <h3>Sweet Spot</h3>
-        <ul>
-          <li>
-            <strong>Business</strong> – Building B2B SAAS products
-          </li>
-          <li>
-            <strong>Timing</strong> – Taking companies from 0 to product/market fit and early scale (1-3 years)
-          </li>
-          <li>
-            <strong>Leadership</strong> – Managing up to 5 developers while still contributing code
-          </li>
-          <li>
-            <strong>Code</strong> – Sr. full stack developer (15 yrs experience) with a specialized focus on front-end JavaScript SPA development
-          </li>
-        </ul>
-        <p>To help you best understand my value and provide a clear framework for expectations, I’ve outlined what I do well as well as what I’m not so good at. Focusing most of my time and energy on my strengths helps in maintaining the consistently high output paramount in an early-stage company.</p>
-        <h3 style="margin-top: 2rem">
-          What I’m good at
-        </h3>
-        <h4 class="employment--header mt-3">
-          Protecting your investment – Strong focus on business value
-        </h4>
-        <div class="subheader--item">
-          <h6 class="subheader--bullet">
-            Business ROI focused code
-          </h6>
-          <p>The code I write will be customer-validated, backed by research, and aligned with business value.</p>
+        <div class="float-left">
+          <fa class="section--icon" :icon="['fas', 'bullseye']"></fa>
         </div>
-        <div class="subheader--item">
-          <h6 class="subheader--bullet">Best talent for the best price</h6>
-          <p>Though multiple approaches are possible, hiring dev talent must align with business objectives. I’ve spent hundreds of thousands of dollars and managed hundreds of developers on platforms like Upwork, Toptal, etc., enabling my businesses to stay largely bootstrapped.</p>
+        <div class="section--right">
+          <h3>Sweet Spot</h3>
+          <ul>
+            <li>
+              <strong>Business</strong> – Building B2B SAAS products
+            </li>
+            <li>
+              <strong>Timing</strong> – Taking companies from 0 to product/market fit and early scale (1-3 years)
+            </li>
+            <li>
+              <strong>Leadership</strong> – Managing up to 5 developers while still contributing code
+            </li>
+            <li>
+              <strong>Code</strong> – Sr. full stack developer (15 yrs experience) with a specialized focus on front-end JavaScript SPA development
+            </li>
+          </ul>
+          <p>
+            To help you best understand my value and provide a clear framework for expectations,
+            I’ve outlined what I do well as well as what I’m not so good at. Focusing most of my
+            time and energy on my strengths helps in maintaining the consistently high output
+            paramount in an early-stage company.
+          </p>
         </div>
+        <div class="float-left">
+          <fa class="section--icon" :icon="['fas', 'seedling']"></fa>
+        </div>
+        <div class="section--right">
+          <h3>
+            What I’m good at
+          </h3>
+          <h4 class="employment--header mt-3">
+            Protecting your investment – Strong focus on business value
+          </h4>
+          <div class="subheader--item">
+            <h6 class="subheader--bullet">
+              Business ROI focused code
+            </h6>
+            <p>The code I write will be customer-validated, backed by research, and aligned with business value.</p>
+          </div>
+          <div class="subheader--item">
+            <h6 class="subheader--bullet">
+              Best talent for the best price
+            </h6>
+            <p>Though multiple approaches are possible, hiring dev talent must align with business objectives. I’ve spent hundreds of thousands of dollars and managed hundreds of developers on platforms like Upwork, Toptal, etc., enabling my businesses to stay largely bootstrapped.</p>
+          </div>
           <div class="subheader--item">
             <h6 class="subheader--bullet">
               CEO perspective
@@ -129,7 +145,12 @@ export default {
               should be done just because "it’s in the roadmap."
             </p>
           </div>
-          <h3 style="margin-top: 2rem">
+        </div>
+        <div class="float-left">
+          <fa class="section--icon" :icon="['fas', 'tired']"></fa>
+        </div>
+        <div class="section--right">
+          <h3>
             What I’m not good at
           </h3>
           <div class="subheader--item">
@@ -165,10 +186,16 @@ export default {
               to replace my services as the company gets to this level.
             </p>
           </div>
-          <h3>What I’ve been working on recently</h3>
-          <nuxt-link to="/resume">
-            See resume for recent work/project history
-          </nuxt-link>
+          <div class="float-left">
+            <fa class="section--icon" :icon="['fas', 'briefcase']"></fa>
+          </div>
+          <div class="section--right">
+            <h3>What I’ve been working on recently</h3>
+            <nuxt-link to="/resume">
+              See resume for recent work/project history
+            </nuxt-link>
+          </div>
+        </div>
       </b-col>
       <b-col lg="3" md="3" sm="auto">
         <resume-side />
