@@ -186,15 +186,15 @@ export default {
               to replace my services as the company gets to this level.
             </p>
           </div>
-          <div class="float-left">
-            <fa class="section--icon" :icon="['fas', 'briefcase']"></fa>
-          </div>
-          <div class="section--right">
-            <h3>What I’ve been working on recently</h3>
-            <nuxt-link to="/resume">
-              See resume for recent work/project history
-            </nuxt-link>
-          </div>
+        </div>
+        <div class="float-left">
+          <fa class="section--icon" :icon="['fas', 'briefcase']"></fa>
+        </div>
+        <div class="section--right">
+          <h3>What I’ve been working on recently</h3>
+          <nuxt-link to="/resume">
+            See resume for recent work/project history
+          </nuxt-link>
         </div>
       </b-col>
       <b-col lg="3" md="3" sm="auto">
