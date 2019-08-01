@@ -33,7 +33,18 @@ export default {
           </div>
           <div class="section--right">
             <h3>Profile</h3>
-            <p>Fundamentally, I’m an entrepreneur. After pooling years of real world experience in marketing, business development and management, my journey led me to karmaCRM, a web-based SAAS CRM company with a product I engineered to fit the needs of small businesses. I chose the name “Karma” because I’m a big believer in good things coming around to those who dispense good vibes out into the world.</p>
+            <p>
+              I have been building full-stack web-apps for over 15 years. I love the elegance of
+              clean code, and the excitement of designing engaging products that directly improve
+              people’s lives. Throughout my career, I have very intentionally invested in nurturing
+              both CTO and CEO skills. My core value lies in my ability to tie business value to code,
+              only building what’s necessary, and building it right the first time.
+            </p>
+            <p>
+              I’ve managed teams of people, and I’ve built complex distrubed mico-service systems
+              entirely myself. I can be a direct producer, manager, or technical liaison depending
+              on the needs of the project.
+            </p>
           </div>
         </div>
         <div class="margin-spacer">
@@ -41,7 +52,7 @@ export default {
             <fa class="section--icon" :icon="['fas', 'briefcase']"></fa>
           </div>
           <div class="section--right">
-            <h3>Employement History</h3>
+            <h3>Employment History</h3>
             <div class="employment--wrapper">
               <h5 class="mb-0 employment--header">CTO and Co-founder at Clickflow</h5>
               <div class="employment--date text-muted">July 2016 - Present</div>
@@ -68,7 +79,7 @@ export default {
               <div class="employment--date text-muted">May 2003 - February 2017</div>
               <ul class="employment--bullets">
                 <li>Helped grow the company from $60k to $1.5 million in 3 years</li>
-                <li>Built custom e-commerce platform specially designed for the custom complexity of the furntiure</li>
+                <li>Built custom e-commerce platform specially designed for the custom complexity of the furniture</li>
                 <li>Created custom backend reports and workflows to streamline processes</li>
                 <li>Migrated site to Shopify and built custom workflow apps on Shopify</li>
               </ul>
@@ -79,7 +90,7 @@ export default {
               <ul class="employment--bullets">
                 <li>Did technical sales, closing $100k in new revenue monthly</li>
                 <li>Hired and grew our dev team from 0 to 10</li>
-                <li>Handled all core software architecture implemention of each client project</li>
+                <li>Handled all core software architecture implementation of each client project</li>
                 <li>Coded and launched over 20 custom web applications</li>
               </ul>
             </div>
