@@ -30,7 +30,9 @@ export default {
       <div class="mainheading">
         <p
           class="lead mb-0"
-        >This is a collection of topics and thoughts that I have found interesting.</p>
+        >
+          This is a collection of topics and thoughts that I have found interesting.
+        </p>
       </div>
       <section class="featured-posts">
         <div class="section-title">

@@ -1,8 +1,14 @@
 <script>
+const ResumeSide = () => import('@/components/ResumeSide')
+const ResumeHeader = () => import('@/components/ResumeHeader')
+
 // Inspiration
 // https://resume.io/app/auth/sign-up/templates
 export default {
-  components: {},
+  components: {
+    ResumeSide,
+    ResumeHeader,
+  },
   head() {
     return {
       title: "John Paul Narowski's Resume",
@@ -14,17 +20,7 @@ export default {
 
 <template>
   <div class="container container-resume">
-    <b-row class="margin-spacer">
-      <b-col>
-        <div class="float-left">
-          <img class="headshot" src="~/assets/img/jp-headshot.jpg" />
-        </div>
-        <div style="margin-left: 90px;">
-          <h3 class="mb-0 mt-1">John Paul Narowski</h3>
-          <div class="text-muted">CTO & Fullstack Developer</div>
-        </div>
-      </b-col>
-    </b-row>
+    <resume-header />
     <b-row class="main--section margin-spacer padding-spacer margin-spacer-bottom">
       <b-col sm="12" md="9" lg="9">
         <div>
@@ -54,8 +50,12 @@ export default {
           <div class="section--right">
             <h3>Employment History</h3>
             <div class="employment--wrapper">
-              <h5 class="mb-0 employment--header">CTO and Co-founder at Clickflow</h5>
-              <div class="employment--date text-muted">July 2016 - Present</div>
+              <h5 class="mb-0 employment--header">
+                CTO and Co-founder at Clickflow
+              </h5>
+              <div class="employment--date text-muted">
+                July 2016 - Present
+              </div>
               <ul class="employment--bullets">
                 <li>Designed core application architecture (VueJS + Ruby API)</li>
                 <li>Implemented performant serverless javascript library to execute test rules</li>
@@ -64,8 +64,12 @@ export default {
               </ul>
             </div>
             <div class="employment--wrapper">
-              <h5 class="mb-0 employment--header">CEO at KarmaCRM</h5>
-              <div class="employment--date text-muted">January 2011 - March 2019</div>
+              <h5 class="mb-0 employment--header">
+                CEO at KarmaCRM
+              </h5>
+              <div class="employment--date text-muted">
+                January 2011 - March 2019
+              </div>
               <ul class="employment--bullets">
                 <li>Designed and built entire architecture (BackboneJS + Ruby API)</li>
                 <li>Lead the company to grow to over $25k MRR</li>
@@ -75,8 +79,12 @@ export default {
               </ul>
             </div>
             <div class="employment--wrapper">
-              <h5 class="mb-0 employment--header">CEO at Amish Tables</h5>
-              <div class="employment--date text-muted">May 2003 - February 2017</div>
+              <h5 class="mb-0 employment--header">
+                CEO at Amish Tables
+              </h5>
+              <div class="employment--date text-muted">
+                May 2003 - February 2017
+              </div>
               <ul class="employment--bullets">
                 <li>Helped grow the company from $60k to $1.5 million in 3 years</li>
                 <li>Built custom e-commerce platform specially designed for the custom complexity of the furniture</li>
@@ -85,8 +93,12 @@ export default {
               </ul>
             </div>
             <div class="employment--wrapper">
-              <h5 class="mb-0 employment--header">CTO and Co-founder at MetaSpring</h5>
-              <div class="employment--date text-muted">May 2005 - April 2008</div>
+              <h5 class="mb-0 employment--header">
+                CTO and Co-founder at MetaSpring
+              </h5>
+              <div class="employment--date text-muted">
+                May 2005 - April 2008
+              </div>
               <ul class="employment--bullets">
                 <li>Did technical sales, closing $100k in new revenue monthly</li>
                 <li>Hired and grew our dev team from 0 to 10</li>
@@ -116,124 +128,7 @@ export default {
         </div>
       </b-col>
       <b-col lg="3" md="3" sm="auto">
-        <div class="details--wrapper">
-          <div class="d-block d-md-none margin-spacer padding-spacer top-gray-border"></div>
-          <h4>Details</h4>
-          <div>87 W. Cedar Ave</div>
-          <div>Denver CO, 80223</div>
-          <div class="mt-2">(734) 931-0116‬</div>
-          <div>jp@sourceborn.com</div>
-          <div class="mt-2">
-            <a href="https://jpnarowski.com">https://jpnarowski.com</a>
-            <span class="text-muted details--label">Blog</span>
-          </div>
-          <div>
-            <a href="https://sourceborn.com">https://sourceborn.com</a>
-            <span class="text-muted details--label">Portfolio</span>
-          </div>
-        </div>
-        <div class="skills--wrapper margin-spacer">
-          <h4>Skills</h4>
-          <div class="mb-3">
-            <div class="mb-1">
-              <strong class="text-muted">Fullstack Development</strong>
-            </div>
-            <div class="d-none d-print-block skill--percent">95%</div>
-            <div class="d-print-none">
-              <b-progress :value="95" :max="100" show-progress></b-progress>
-            </div>
-          </div>
-          <div class="mb-3">
-            <div class="mb-1">
-              <strong class="text-muted">Product</strong>
-            </div>
-            <div class="d-none d-print-block skill--percent">91%</div>
-            <div class="d-print-none">
-              <b-progress :value="91" :max="100" show-progress></b-progress>
-            </div>
-          </div>
-          <div class="mb-3">
-            <div class="mb-1">
-              <strong class="text-muted">Leadership</strong>
-            </div>
-            <div class="d-none d-print-block skill--percent">90%</div>
-            <div class="d-print-none">
-              <b-progress :value="90" :max="100" show-progress></b-progress>
-            </div>
-          </div>
-          <div class="mb-3">
-            <div class="mb-1">
-              <strong class="text-muted">Management</strong>
-            </div>
-            <div class="d-none d-print-block skill--percent">85%</div>
-            <div class="d-print-none">
-              <b-progress :value="85" :max="100" show-progress></b-progress>
-            </div>
-          </div>
-          <div>
-            <div class="mb-1">
-              <strong class="text-muted">Marketing</strong>
-            </div>
-            <div class="d-none d-print-block skill--percent">40%</div>
-            <div class="d-print-none">
-              <b-progress :value="40" :max="100" show-progress></b-progress>
-            </div>
-          </div>
-        </div>
-        <div class="technical--wrapper margin-spacer">
-          <h4>Technical</h4>
-          <div class="skills--header">Frontend</div>
-          <div class="technical--item">
-            <div class="technical--years">3 yrs</div>
-            <div class="technical--name">React/Redux</div>
-          </div>
-          <div class="technical--item">
-            <div class="technical--years">2 yrs</div>
-            <div class="technical--name">VueJS</div>
-          </div>
-          <div class="technical--item">
-            <div class="technical--years">2 yrs</div>
-            <div class="technical--name">Angular</div>
-          </div>
-          <div class="technical--item">
-            <div class="technical--years">7 yrs</div>
-            <div class="technical--name">BackboneJS</div>
-          </div>
-          <div class="technical--item">
-            <div class="technical--years">4 yrs</div>
-            <div class="technical--name">Webpack</div>
-          </div>
-          <div class="skills--header">Backend</div>
-          <div class="technical--item">
-            <div class="technical--years">10 yrs</div>
-            <div class="technical--name">Ruby</div>
-          </div>
-          <div class="technical--item">
-            <div class="technical--years">10 yrs</div>
-            <div class="technical--name">Rails (since 1.x)</div>
-          </div>
-          <div class="technical--item">
-            <div class="technical--years">10 yrs</div>
-            <div class="technical--name">MySQL</div>
-          </div>
-          <div class="technical--item">
-            <div class="technical--years">3 yrs</div>
-            <div class="technical--name">PostgreSQL</div>
-          </div>
-          <div class="technical--item">
-            <div class="technical--years">3 yrs</div>
-            <div class="technical--name">Elasticsearch</div>
-          </div>
-          <div class="skills--header">Server</div>
-          <div class="technical--item">
-            <div class="technical--years">3 yrs</div>
-            <div class="technical--name">Docker</div>
-          </div>
-          <div class="technical--item">
-            <div class="technical--years">6 mo</div>
-            <div class="technical--name">Kubernetes</div>
-          </div>
-        </div>
+        <resume-side />
       </b-col>
     </b-row>
   </div>

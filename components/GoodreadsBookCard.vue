@@ -51,12 +51,16 @@ export default {
         </div>
       </b-col>
       <b-col cols="10">
-        <div v-if="loading">Fetching book...</div>
+        <div v-if="loading">
+          Fetching book...
+        </div>
         <div v-if="!loading" class="goodreads-book--title">
           <a v-if="item.book_link.url" :href="item.book_link.url">{{ book.title }}</a>
           <a v-if="!item.book_link.url" :href="book.link">{{ book.title }}</a>
         </div>
-        <div class="goodreads-book--author">{{ authors }}</div>
+        <div class="goodreads-book--author">
+          {{ authors }}
+        </div>
       </b-col>
     </b-row>
   </div>
