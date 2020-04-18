@@ -31,8 +31,7 @@ export default {
             <h3>Profile</h3>
             <p>
               I have been building full-stack web-apps for over 15 years. I love the elegance of
-              clean code, and the excitement of designing engaging products that directly improve
-              people’s lives. Throughout my career, I have very intentionally invested in nurturing
+              clean code, and the excitement of designing engaging products. Throughout my career, I have very intentionally invested in nurturing
               both CTO and CEO skills. My core value lies in my ability to tie business value to code,
               only building what’s necessary, and building it right the first time.
             </p>
@@ -58,9 +57,11 @@ export default {
               </div>
               <ul class="employment--bullets">
                 <li>Designed core application architecture (VueJS + Ruby API)</li>
+                <li>Created performant puppeteer based crawling engine for scalable daily crawling of hundreds of websites</li>
+                <li>Architected RabbitMQ based microservice communication system for complex multi-step data processing flows</li>
                 <li>Implemented performant serverless javascript library to execute test rules</li>
                 <li>Launched data-science backed microservices to enhance the data model</li>
-                <li>Helped conduct customer development interviews to achieve product/market fit</li>
+                <li>Helped conduct customer development interviews and user testing to achieve product/market fit</li>
               </ul>
             </div>
             <div class="employment--wrapper">
@@ -72,10 +73,10 @@ export default {
               </div>
               <ul class="employment--bullets">
                 <li>Designed and built entire architecture (BackboneJS + Ruby API)</li>
-                <li>Lead the company to grow to over $25k MRR</li>
-                <li>Managed offshore dev teams</li>
+                <li>Lead the company to over $25k in MRR growth</li>
+                <li>Managed a team of in-house and offshore developers</li>
                 <li>Hired and mentored JR developers</li>
-                <li>Oversaw growth to over 6,000 users</li>
+                <li>Oversaw user expansion to over 6,000</li>
               </ul>
             </div>
             <div class="employment--wrapper">
@@ -108,7 +109,7 @@ export default {
             </div>
           </div>
         </div>
-        <div class="employment--wrapper">
+        <div style="display: none" class="employment--wrapper">
           <div class="float-left">
             <fa class="section--icon" :icon="['fas', 'graduation-cap']"></fa>
           </div>

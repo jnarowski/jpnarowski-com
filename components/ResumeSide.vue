@@ -10,7 +10,7 @@ export default {}
       <div>87 W. Cedar Ave</div>
       <div>Denver CO, 80223</div>
       <div class="mt-2">
-        (734) 931-0116‬
+        ‪(734) 210-1790‬
       </div>
       <div>jp@sourceborn.com</div>
       <div class="mt-2">
@@ -87,7 +87,7 @@ export default {}
       </div>
       <div class="technical--item">
         <div class="technical--years">
-          3 yrs
+          4 yrs
         </div>
         <div class="technical--name">
           React/Redux
@@ -95,7 +95,7 @@ export default {}
       </div>
       <div class="technical--item">
         <div class="technical--years">
-          2 yrs
+          3 yrs
         </div>
         <div class="technical--name">
           VueJS
@@ -107,14 +107,6 @@ export default {}
         </div>
         <div class="technical--name">
           Angular
-        </div>
-      </div>
-      <div class="technical--item">
-        <div class="technical--years">
-          7 yrs
-        </div>
-        <div class="technical--name">
-          BackboneJS
         </div>
       </div>
       <div class="technical--item">
@@ -168,6 +160,22 @@ export default {}
           Elasticsearch
         </div>
       </div>
+      <div class="technical--item">
+        <div class="technical--years">
+          1 yr
+        </div>
+        <div class="technical--name">
+          Python
+        </div>
+      </div>
+      <div class="technical--item">
+        <div class="technical--years">
+          1 yr
+        </div>
+        <div class="technical--name">
+          RabbitMQ
+        </div>
+      </div>
       <div class="skills--header">
         Server
       </div>
@@ -177,14 +185,6 @@ export default {}
         </div>
         <div class="technical--name">
           Docker
-        </div>
-      </div>
-      <div class="technical--item">
-        <div class="technical--years">
-          6 mo
-        </div>
-        <div class="technical--name">
-          Kubernetes
         </div>
       </div>
     </div>

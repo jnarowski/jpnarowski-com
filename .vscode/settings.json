@@ -24,7 +24,7 @@
   // ===
   // Event Triggers
   // ===
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": false,
   "eslint.autoFixOnSave": true,
   "eslint.run": "onSave",
   // ===
@@ -56,5 +56,8 @@
   "[markdown]": {
     "editor.wordWrap": "wordWrapColumn",
     "editor.wordWrapColumn": 80
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
   }
 }
