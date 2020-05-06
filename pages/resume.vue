@@ -30,13 +30,13 @@ export default {
           <div class="section--right">
             <h3>Profile</h3>
             <p>
-              I have been building full-stack web-apps for over 15 years. I love the elegance of
-              clean code, and the excitement of designing products that delight. Throughout my career, I have very intentionally invested in nurturing
+              I have been building full-stack web apps for over 15 years. I love the elegance of
+              clean code and the excitement of designing products that delight. Throughout my career, I have intentionally invested in nurturing
               both CTO and CEO skills. My core value lies in my ability to tie business value to code,
               only building what’s necessary, and building it right the first time.
             </p>
             <p>
-              I’ve managed teams, and I’ve built complex distrubed mico-service systems
+              I’ve managed teams, and I’ve built complex distributed mico-service systems
               entirely myself. I can be a direct producer, manager, or technical liaison depending
               on the needs of the project.
             </p>
@@ -58,8 +58,8 @@ export default {
               <ul class="employment--bullets">
                 <li>Designed entire core application architecture from scratch (VueJS + Ruby API + Python + Node)</li>
                 <li>Created node crawling cluster for scalable daily crawling of hundreds of websites</li>
-                <li>Architected RabbitMQ based microservice communication system for complex multi-step data processing flows</li>
-                <li>Implemented cloud worker javascript library to execute A/B tests at the CDN level</li>
+                <li>Architected RabbitMQ-based microservice communication system for complex multi-step data processing flows</li>
+                <li>Implemented cloud worker JavasScript library to execute A/B tests at the CDN level</li>
                 <li>Launched python data-science microservice to identify when webpages are losing traffic</li>
                 <li>Conducted extensive customer development and user testing interviews to achieve product market fit</li>
               </ul>
@@ -72,9 +72,9 @@ export default {
                 January 2011 - March 2019
               </div>
               <ul class="employment--bullets">
-                <li>Designed and built entire architecture from scratch (BackboneJS + Ruby API)</li>
+                <li>Designed and built entire architecture from scratch (Backbone.js + Ruby API)</li>
                 <li>Migrated Elasticsearch 1x to 7x</li>
-                <li>Lead the company to over $25k in MRR growth</li>
+                <li>Led the company to over $25k in MRR growth</li>
                 <li>Managed a team of in-house and offshore developers</li>
                 <li>Hired and mentored JR developers</li>
                 <li>Oversaw user expansion to over 6,000 users</li>
@@ -89,7 +89,7 @@ export default {
               </div>
               <ul class="employment--bullets">
                 <li>Helped grow the company from $60k to $1.5 million in 3 years</li>
-                <li>Built custom e-commerce Ruby-on-Rails platform specially designed for the custom complexity of the furniture customization</li>
+                <li>Built custom e-commerce Ruby-on-Rails platform specially designed for the custom complexity of furniture customization</li>
                 <li>Migrated site to Shopify and built custom workflow apps on Shopify</li>
                 <li>Created custom backend reporting and workflows to streamline processes</li>
                 <li>Oversaw the SEO growth to ranking #1 for dining room tables and dining room furniture</li>
@@ -103,7 +103,7 @@ export default {
                 May 2005 - April 2008
               </div>
               <ul class="employment--bullets">
-                <li>Did technical sales, closing $100k in new revenue monthly</li>
+                <li>Excelled at technical sales, closing $100k in new revenue monthly</li>
                 <li>Hired and grew our dev team from 0 to 10</li>
                 <li>Handled all core software architecture implementation for each client project</li>
                 <li>Coded and launched over 20 custom web applications</li>

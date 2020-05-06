@@ -33,7 +33,7 @@ export default {
               <strong>Business</strong> – Building B2B SAAS products
             </li>
             <li>
-              <strong>Timing</strong> – Taking companies from 0 to product/market fit and early scale (1-3 years)
+              <strong>Timing</strong> – Taking companies from 0 to product/market fit and early scale
             </li>
             <li>
               <strong>Leadership</strong> – Managing up to 5 developers while still contributing code
@@ -44,7 +44,7 @@ export default {
           </ul>
           <p>
             To help you best understand my value and provide a clear framework for expectations,
-            I’ve outlined what I do well as well as what I’m not so good at. Focusing most of my
+            I’ve outlined where I excell as well as what I’m not so good at. Focusing most of my
             time and energy on my strengths helps in maintaining the consistently high output
             paramount in an early-stage company.
           </p>
@@ -69,14 +69,14 @@ export default {
             <h6 class="subheader--bullet">
               Best talent for the best price
             </h6>
-            <p>Though multiple approaches are possible, hiring dev talent must align with business objectives. I’ve spent hundreds of thousands of dollars and managed hundreds of developers on platforms like Upwork, Toptal, etc., enabling my businesses to stay largely bootstrapped.</p>
+            <p>Though multiple approaches are possible, hiring dev talent must align with business objectives. I’ve spent hundreds of thousands of dollars and managed hundreds of developers on platforms like Upwork, Toptal and more, enabling my businesses to stay largely bootstrapped.</p>
           </div>
           <div class="subheader--item">
             <h6 class="subheader--bullet">
               CEO perspective
             </h6>
             <p>
-              I have spent my career switching between CEO and CTO roles. I’ve grown an e-commerce company from $60k to $1.5 million in annual revenue. I’ve built sales teams as well as sold directly myself, averaging over 100k in monthly sales while still writing code in the afternoon.
+              I have spent my career switching between CEO and CTO roles. I’ve grown an e-commerce company from $60k to $1.5 million in annual revenue. I’ve built sales teams as well as sold directly myself, averaging over 100k in monthly sales while writing code in the afternoon.
             </p>
           </div>
           <div class="subheader--item">
@@ -84,7 +84,7 @@ export default {
               Communication
             </h6>
             <p>
-              I can tell you in clear, non-developer(y) language jargon where things stand. Strong, consistent communication and comprehension of business goals save time and money.
+              I can tell you in clear, non-developer(y) language jargon where things stand. Strong, consistent communication and awareness of business goals save time and money.
             </p>
           </div>
           <div>
@@ -92,7 +92,7 @@ export default {
               Process
             </h6>
             <p>
-              I rely on well-designed processes and tools to keep things on track. This means Asana, developer sprints, regular one-on-ones, and clean documentation.
+              I rely on well-designed processes and tools to keep sprints and products on track. This means Asana, developer sprints, regular one-on-ones, and clean documentation.
             </p>
           </div>
           <h4 class="employment--header mt-3">
@@ -106,10 +106,10 @@ export default {
               Choosing the right technology
             </h6>
             <p>
-              When starting your project, an overwhelming number of technologies and frameworks are available to pick from. I have strong, evidence-based opinions on WHICH tech to use and WHY. These decisions have massive repercussions on your ability to easily staff your project, scale, and move quickly.
+              I have strong, evidence-based opinions on WHICH tech to use and WHY. When starting your project, an overwhelming number of technologies and frameworks are available to pick from. These decisions have massive repercussions on your ability to easily staff your project, scale, and move quickly.
             </p>
             <p>
-              I’ve scaled products to thousands of users, across complex server architectures. It all starts with your technical foundation.
+              I’ve scaled products to thousands of users across complex server architectures. It all starts with your technical foundation.
             </p>
           </div>
           <div class="subheader--item">
@@ -119,7 +119,7 @@ export default {
             <p>
               I LOVE to code. This can be either good or bad when left unchecked. Without adequate
               attention to business impact, code can quickly become wasted time and technical debt.
-              Trust me, I learned this the hard way. These days, I don’t write code until the features
+              I learned this the hard way. These days, I don’t write code until the features
               go through proper validation and customer development to ensure I am always building the
               right stuff for the right reasons.
             </p>
@@ -158,7 +158,7 @@ export default {
               Uber-technical low-level coding
             </h6>
             <p>
-              Since I’ve spent so much time on the business side, I consider myself somewhat of a generalist.
+              Since I’ve spent so much time on the business side, I consider myself something of a generalist.
               I am not one of “those developers” that spends their weekends writing C++ libraries.
               Need someone to write a complex data science algorithm? I can hire and manage these developers
               (as I have successfully in the past), but I wouldn’t be the right fit to write this myself.
@@ -172,18 +172,8 @@ export default {
               I have done my fair share of Linux administration filled with docker and Kubernetes, but it’s
               not my strong suit. Luckily, with the trend toward Cloud-based and serverless, this skill
               is becoming less of an issue. To be able to keep myself and my developers focused on business
-              value, I partner with companies that do affordable managed hosting.
-            </p>
-          </div>
-          <div class="subheader--item">
-            <h6 class="subheader--bullet">
-              Long-term maintenance
-            </h6>
-            <p>
-              Once a project is out of the early stages and into maintenance mode, the focus
-              generally shifts to marginal gains. Here, my early-stage energy begins to wane.
-              I thrive on the rapid pace of early stage, and would likely help you hire someone
-              to replace my services as the company gets to this level.
+              value, I partner with companies that provide managed dev-ops managed hosting.
+              This keeps my dev teams focused on adding business value, instead of managing infrastructure.
             </p>
           </div>
         </div>

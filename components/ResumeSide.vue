@@ -8,7 +8,7 @@ export default {}
       <div class="d-block d-md-none margin-spacer padding-spacer top-gray-border"></div>
       <h4>Details</h4>
       <div>87 W. Cedar Ave</div>
-      <div>Denver CO, 80223</div>
+      <div>Denver, CO 80223</div>
       <div class="mt-2">
         ‪(734) 210-1790‬
       </div>
