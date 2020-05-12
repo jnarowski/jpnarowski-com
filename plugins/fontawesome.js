@@ -10,8 +10,11 @@ import {
   faUser,
   faBriefcase,
   faPodcast,
+  faMedal,
   faGraduationCap,
-  faBullseye
+  faBullseye,
+  faQuoteLeft,
+  faQuoteRight
 } from '@fortawesome/free-solid-svg-icons'
 import { faFacebookF, faTwitter, faLinkedinIn, faFlickr } from '@fortawesome/free-brands-svg-icons'
 
@@ -27,6 +30,9 @@ library.add([
   faGraduationCap,
   faBullhorn,
   faBriefcase,
+  faMedal,
+  faQuoteLeft,
+  faQuoteRight,
   faSearch,
   faUser,
   faTired,

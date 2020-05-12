@@ -22,6 +22,11 @@ export default {}
                   Sweet Spot
                 </nuxt-link>
               </li>
+              <li class="nav-item">
+                <nuxt-link class="nav-link" to="/recommendations" active-class="active">
+                  Recommendations
+                </nuxt-link>
+              </li>
             </ul>
           </div>
           <h3 class="mb-0">
