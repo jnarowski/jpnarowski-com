@@ -35,7 +35,7 @@ export default {
             date="April 1st, 2020"
             source="upwork"
             link="https://www.upwork.com/freelancers/~0162949251dedf900f"
-            subtitle="Senior Backend Developer reported to JP while at Clickflow"
+            subtitle="Reported directly to JP as a SR Backend Developer"
             image="img/avatars/JesusAlvarado.jpeg"
           >
             <p>It's been a pleasure to work with JP. He is so communicative and smart. I really enjoyed the opportunity of creating great ideas together to succeed on our goals. It's been a long road, a path full of learning and personal growth. I am sure we will keep working together on interesting projects like this one.</p>
@@ -45,7 +45,7 @@ export default {
             date="December 1st, 2019"
             source="upwork"
             link="https://www.upwork.com/freelancers/~01fe1c6eb2a867f781"
-            subtitle="Senior Backend Developer reported to JP while at Clickflow"
+            subtitle="Reported directly to JP as a SR Backend Developer"
             image="img/avatars/AlexiA.webp"
           >
             <p>This client is knowledgeable when it comes to latest technologies and software architecture. The task he gave me was challenging, however, the deadlines were reasonable. It was an interesting project, would work again.</p>
@@ -67,7 +67,7 @@ export default {
             date="December 1st, 2019"
             source="upwork"
             link="https://www.upwork.com/freelancers/~019a32602bb3b9196e"
-            subtitle="Senior Developer reported to JP while at Clickflow"
+            subtitle="Reported directly to JP as a SR Backend Developer"
             image="img/avatars/DanielM.webp"
           >
             <p>Great and smooth collaboration. Clear requirements! With John I also had best support to set-up the project locally so I can start work quickly. I highly recommend him and I'm looking forward for the next project.</p>
@@ -89,7 +89,7 @@ export default {
             date="May 11th, 2015"
             source="linkedin"
             link="https://www.linkedin.com/in/jconte77/"
-            subtitle="Worked for JP as a marketing vendor"
+            subtitle="Worked for JP as a marketing contractor"
             image="img/avatars/JoeConte.jpeg"
           >
             <p>JP is one of the most genuine people I've had a chance to work with. His convictions are deep and he believes in a new way of doing business that puts people first. He's open to new ideas and helped introduce new to my life.</p>
